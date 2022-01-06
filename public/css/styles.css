@@ -1,4 +1,24 @@
+/* Colors */
+/* #00bef4 sky-blue in logo*/
+/* #3A429A dark-blue in logo*/
+/* #37000A dark magenta */
+/* #D1BCE3 light-purple*/
+/* #0098c2 pink olive*/
+
 .nav-logo {
   height: 3rem;
   width: 9rem;
+}
+
+.dropdown-item, .nav-link {
+  color: #3A429A;
+}
+
+.dropdown-item:hover, .nav-link:hover {
+  color: #00bef4;
+  background: none;
+}
+.fal {
+  font-size: 2rem;
+  color: #3A429A;
 }
