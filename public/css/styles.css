@@ -89,7 +89,7 @@ NAVBAR
 @media only screen and (min-width: 992px) {
   .nav-logo {
     height: 3.5rem;
-    width: 10.5rem;
+    width: 13rem;
   }
 
   .nav-link {
@@ -132,9 +132,11 @@ Welcome Section
   width: 80vw;
   background-color: rgba(0, 190, 244, 0.9);
   border: 1px solid #3A429A;
-  border-radius: 20%;
+  border-radius: 15%;
   text-align: center;
-  height: 55vh;
+  min-height: 40vh;
+  padding-top: 3rem;
+  padding-bottom: 2.5rem;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -214,28 +216,63 @@ CONTACT SECTION
   background: rgba(58, 66, 154, 0.8);
 }
 
+div.contact-section p {
+  font-size: 0.8rem;
+}
+
+div.contact-section .section-header {
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+}
+
+@media only screen and (min-width: 600px) {
+  div.contact-section p {
+    font-size: 1rem;
+  }
+}
+
+/* @media only screen and (min-width: 992px) {
+  div.contact-section p {
+    font-size: 1.5rem;
+  }
+} */
+
 .contact-page {
-  margin: 7rem auto 3.5rem;
+  margin: 5rem auto 5rem;
+  padding: 0 3rem;
 }
 
 .question-header {
   text-align: center;
   color: #37000A;
+  margin-bottom: 2.5rem;
+}
+
+.form-group {
+  margin: 0.5rem auto 0.7rem;
+}
+
+.submit-btn {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #FFF;
+  border-radius: 5px;
+  background: rgba(58, 66, 154, 1);
 
 }
 
-form {
-  margin: 5rem 3rem;
+.submit-btn:hover {
+  color: #FFF;
+  border: 1px solid #3A429A;
+  background-color: rgba(58, 66, 154, 0.8);
+
 }
 
-textarea {
-  vertical-align: top;
-}
 /*
 FOOTER
 */
 
 footer {
   text-align: center;
-  margin: 1rem 0;
+  margin: 1.2rem 0;
 }
