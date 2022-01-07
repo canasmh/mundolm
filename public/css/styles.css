@@ -67,6 +67,10 @@ NAVBAR
   color: #3A429A;
 }
 
+.dropdown-divider {
+  width: 100%;
+}
+
 @media only screen and (min-width: 992px) {
   .nav-logo {
     height: 3.5rem;
@@ -167,6 +171,16 @@ OUR SERVICES SECTION
   background: rgb(0, 152, 194, 0.25)
 }
 
+/*
+CONTACT SECTION
+*/
+
+.contact-section {
+  color: #fff;
+  height: 75vh;
+  padding: 10vh 5vw 5vh;
+  background: rgba(58, 66, 154, 0.8);
+}
 
 /*
 FOOTER
