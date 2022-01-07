@@ -143,6 +143,16 @@ Welcome Section
   flex-direction: column;
 }
 
+div.welcome-banner h2, hr.welcome-hr {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  div.welcome-banner h2, hr.welcome-hr {
+    display: block;
+  }
+}
+
 .mlm-header {
   color: #3A429A;
   text-shadow: 1px 1px #000;
@@ -235,6 +245,7 @@ div.about-section p {
     margin: 2rem auto 5rem;
     width: 15rem;
     height: 15rem;
+    border-radius: 15px;
   }
 }
 
