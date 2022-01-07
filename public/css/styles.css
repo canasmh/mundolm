@@ -243,16 +243,16 @@ div.about-section p {
 @media only screen and (min-width: 600px) {
   .team-img {
     margin: 2rem auto 5rem;
-    width: 15rem;
-    height: 15rem;
+    width: 20rem;
+    height: 20rem;
     border-radius: 15px;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .team-img {
-    width: 20rem;
-    height: 20rem;
+    /* width: 20rem;
+    height: 20rem; */
     float: right;
     margin-left: 5rem;
   }
@@ -324,11 +324,60 @@ div.contact-section .section-header {
   }
 }
 
-/* @media only screen and (min-width: 992px) {
-  div.contact-section p {
-    font-size: 1.5rem;
-  }
-} */
+/*
+
+
+
+ABOUT page
+
+
+
+*/
+
+.about-page {
+  background-image: url("../images/team-pic2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+}
+
+.team-btn-div {
+  margin: auto;
+}
+
+.btn-team {
+  border: 2px solid #FFF;
+  background-color: none;
+  border-radius: 15px;
+  color: #FFF;
+  font-size: 1.8rem;
+  font-weight: 200;
+  padding: 0.5rem 3rem;
+}
+
+.btn-team:hover {
+  border: 2px solid #C3C3C3;
+  color: #E1E1E1;
+}
+
+.team-page {
+  min-height: 80vh;
+}
+
+
+
+
+/*
+
+
+
+CONTACT page
+
+
+
+*/
 
 .contact-page {
   margin: 5rem auto 5rem;
@@ -351,7 +400,6 @@ div.contact-section .section-header {
   color: #FFF;
   border-radius: 5px;
   background: rgba(58, 66, 154, 1);
-
 }
 
 .submit-btn:hover {
