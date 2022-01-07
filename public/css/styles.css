@@ -206,9 +206,10 @@ ABOUT US SECTION
 
 .about-section {
   color: #37000A;
-  padding: 15vh 5vw 10vh;
+  padding: 2.5rem 5vw 3rem;
   background: rgba(0, 152, 194, 0.1);
   min-height: 75vh;
+  text-align: center;
 }
 
 @media only screen and (min-width: 992px) {
@@ -216,6 +217,37 @@ ABOUT US SECTION
     padding: 15vh 10vw 10vh;
   }
 
+}
+
+.team-img {
+  margin: 1rem auto 3rem;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 100%;
+}
+
+div.about-section p {
+  text-align: left;
+}
+
+@media only screen and (min-width: 600px) {
+  .team-img {
+    margin: 2rem auto 5rem;
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .team-img {
+    width: 20rem;
+    height: 20rem;
+    float: right;
+    margin-left: 5rem;
+  }
+  div.about-section p {
+    text-align: justify;
+  }
 }
 
 /*
