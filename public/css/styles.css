@@ -4,7 +4,10 @@
 /* #37000A dark magenta */
 /* #D1BCE3 light-purple*/
 /* #0098c2 pink olive*/
-
+body {
+  line-height: 2;
+  letter-spacing: 3px;
+}
 
 @media only screen and (min-width: 600px) {
   .welcome-banner {
@@ -66,11 +69,27 @@ NAVBAR
 }
 
 /*
+
+
+SECTIONS
+
+
+*/
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/*
 Welcome Section
 */
 
+
+
 .welcome-section {
   height: 80vh;
+  display: flex;
   background-image: url("../images/phone-call.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -95,13 +114,14 @@ Welcome Section
 
 .mlm-header {
   color: #3A429A;
-  text-shadow: 2px 2px #000;
+  text-shadow: 1px 1px #000;
 }
 
 @media only screen and (min-width: 600px) {
   .welcome-banner {
     width: 60vw;
     margin: auto 20vw;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -109,4 +129,40 @@ Welcome Section
     width: 40vw;
     margin: auto 5rem;
   }
+
+  .mlm-header {
+    text-shadow: 2px 2px #000;
+  }
+}
+
+/*
+ABOUT US SECTION
+*/
+
+.about-section {
+  color: #37000A;
+  height: 80vh;
+  padding: 15vh 5vw 10vh;
+  background: rgba(209, 188, 227, 0.25)
+}
+
+/*
+OUR SERVICES SECTION
+*/
+
+.service-section {
+  color: #37000A;
+  height: 80vh;
+  padding: 15vh 5vw 10vh;
+  background: rgb(0, 152, 194, 0.25)
+}
+
+
+/*
+FOOTER
+*/
+
+footer {
+  text-align: center;
+  margin: 1rem 0;
 }
