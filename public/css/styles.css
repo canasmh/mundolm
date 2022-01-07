@@ -24,8 +24,8 @@ p {
 
 hr {
   width: 67%;
-  margin: 1.5rem auto;
-  color: #37000A;
+  margin: 1rem auto;
+  color: #3A429A;
 }
 
 @media only screen and (max-width: 300px) {
@@ -107,7 +107,7 @@ SECTIONS
 
 .section-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 /*
@@ -160,7 +160,9 @@ Welcome Section
   background-color: inherit;
   border: 1px solid #FFF;
   color: #FFF;
-  margin: 0 0.2rem;
+  margin: 0.5rem 0.3rem;
+  width: 60%;
+  padding: 0.5rem;
 }
 
 .quote-btn {
@@ -168,7 +170,9 @@ Welcome Section
   background-color: #3A429A;
   border: 1px solid #3A429A;
   color: #FFF;
-  margin: 0 0.2rem;
+  margin: 0.5rem 0.3rem;
+  width: 60%;
+  padding: 0.5rem;
 }
 
 .es-btn:hover, .quote-btn:hover  {
@@ -187,7 +191,7 @@ Welcome Section
 
 @media only screen and (min-width: 992px) {
   .welcome-banner {
-    width: 30rem;
+    width: 35rem;
     margin: auto 5rem;
   }
 
@@ -255,6 +259,22 @@ div.contact-section .section-header {
   margin-top: 0.5rem;
 }
 
+.soc-icon-container {
+  text-align: center;
+}
+
+.soc-icon {
+  font-size: 1.5rem;
+  margin: 1rem 1rem 2rem;
+  color: #FFF;
+}
+
+.contact-hr {
+  width: 30%;
+  color: #FFF;
+  border: 1px solid #FFF;
+  margin: 2rem auto;
+}
 @media only screen and (min-width: 600px) {
   div.contact-section p {
     font-size: 1rem;
