@@ -172,7 +172,13 @@ ABOUT US SECTION
   color: #37000A;
   padding: 15vh 5vw 10vh;
   background: rgb(0, 152, 194, 0.1)
-  /* background: rgba(209, 188, 227, 0.25) */
+}
+
+@media only screen and (min-width: 992px) {
+  .about-section {
+    padding: 15vh 10vw 10vh;
+  }
+
 }
 
 /*
@@ -183,6 +189,13 @@ OUR SERVICES SECTION
   color: #37000A;
   padding: 15vh 5vw 10vh;
   /* background: rgb(0, 152, 194, 0.1) */
+}
+
+@media only screen and (min-width: 992px) {
+  .service-section {
+    padding: 15vh 10vw 10vh;
+  }
+
 }
 
 /*
@@ -199,6 +212,15 @@ CONTACT SECTION
   background: rgba(58, 66, 154, 0.8);
 }
 
+.contact-page {
+  margin: 7rem auto 3.5rem;
+}
+
+.question-header {
+  text-align: center;
+  color: #37000A;
+
+}
 /*
 FOOTER
 */
