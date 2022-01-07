@@ -9,12 +9,26 @@ body {
   letter-spacing: 3px;
 }
 
-@media only screen and (min-width: 600px) {
-  .welcome-banner {
-    width: 60vw;
-    margin: auto 20vw;
-  }
+h1 {
+  font-size: 2rem;
+}
 
+h2 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1.2rem;
+
+}
+
+hr {
+  width: 67%;
+  margin: 1.5rem auto;
+  color: #37000A;
+}
+
+@media only screen and (min-width: 600px) {
   h1 {
     font-size: 3.2rem;
   }
@@ -28,11 +42,7 @@ body {
 
   }
 }
-hr {
-  width: 67%;
-  margin: 1.5rem auto;
-  color: #37000A;
-}
+
 
 /*
 NAVBAR
