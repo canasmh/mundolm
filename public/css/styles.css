@@ -148,14 +148,14 @@ Welcome Section
 
 @media only screen and (min-width: 600px) {
   .welcome-banner {
-    width: 60vw;
+    width: 30rem;
     margin: auto 20vw;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .welcome-banner {
-    width: 40vw;
+    width: 30rem;
     margin: auto 5rem;
   }
 
@@ -171,7 +171,8 @@ ABOUT US SECTION
 .about-section {
   color: #37000A;
   padding: 15vh 5vw 10vh;
-  background: rgb(0, 152, 194, 0.1)
+  background: rgba(0, 152, 194, 0.1);
+  min-height: 75vh;
 }
 
 @media only screen and (min-width: 992px) {
@@ -188,6 +189,7 @@ OUR SERVICES SECTION
 .service-section {
   color: #37000A;
   padding: 15vh 5vw 10vh;
+  min-height: 75vh;
   /* background: rgb(0, 152, 194, 0.1) */
 }
 
@@ -220,6 +222,14 @@ CONTACT SECTION
   text-align: center;
   color: #37000A;
 
+}
+
+form {
+  margin: 5rem 3rem;
+}
+
+textarea {
+  vertical-align: top;
 }
 /*
 FOOTER
