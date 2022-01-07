@@ -5,12 +5,42 @@
 /* #D1BCE3 light-purple*/
 /* #0098c2 pink olive*/
 
+
+@media only screen and (min-width: 600px) {
+  .welcome-banner {
+    width: 60vw;
+    margin: auto 20vw;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+
+  }
+}
+hr {
+  width: 67%;
+  margin: 1.5rem auto;
+  color: #37000A;
+}
+
+/*
+NAVBAR
+*/
 .nav-logo {
   height: 3rem;
   width: 9rem;
 }
 
 .dropdown-item, .nav-link {
+  font-size: 1.2rem;
   color: #3A429A;
 }
 
@@ -22,4 +52,61 @@
 .fal {
   font-size: 2rem;
   color: #3A429A;
+}
+
+@media only screen and (min-width: 992px) {
+  .nav-logo {
+    height: 3.5rem;
+    width: 10.5rem;
+  }
+
+  .nav-link {
+    margin: auto 0.5rem;
+  }
+}
+
+/*
+Welcome Section
+*/
+
+.welcome-section {
+  height: 80vh;
+  background-image: url("../images/phone-call.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  color: white;
+}
+
+.welcome-banner {
+  margin: auto 10vw;
+  width: 80vw;
+  background-color: rgba(0, 190, 244, 0.9);
+  border: 1px solid #3A429A;
+  border-radius: 20%;
+  text-align: center;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.mlm-header {
+  color: #3A429A;
+  text-shadow: 2px 2px #000;
+}
+
+@media only screen and (min-width: 600px) {
+  .welcome-banner {
+    width: 60vw;
+    margin: auto 20vw;
+}
+
+@media only screen and (min-width: 992px) {
+  .welcome-banner {
+    width: 40vw;
+    margin: auto 5rem;
+  }
 }
