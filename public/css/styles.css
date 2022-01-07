@@ -148,6 +148,36 @@ Welcome Section
   text-shadow: 1px 1px #000;
 }
 
+.welcome-buttons {
+  width: 80%;
+  margin: 0 auto;
+  display: inline;
+
+}
+
+.es-btn {
+  border-radius: 10px;
+  background-color: inherit;
+  border: 1px solid #FFF;
+  color: #FFF;
+  margin: 0 0.2rem;
+}
+
+.quote-btn {
+  border-radius: 10px;
+  background-color: #3A429A;
+  border: 1px solid #3A429A;
+  color: #FFF;
+  margin: 0 0.2rem;
+}
+
+.es-btn:hover, .quote-btn:hover  {
+  border: 1px solid #3A429A;
+  background-color: #FFF;
+  color: #3A429A;
+}
+
+
 @media only screen and (min-width: 600px) {
   .welcome-banner {
     width: 30rem;
