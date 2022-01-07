@@ -28,6 +28,21 @@ hr {
   color: #37000A;
 }
 
+@media only screen and (max-width: 300px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+
+  }
+}
+
 @media only screen and (min-width: 600px) {
   h1 {
     font-size: 3.2rem;
@@ -119,7 +134,7 @@ Welcome Section
   border: 1px solid #3A429A;
   border-radius: 20%;
   text-align: center;
-  height: 60vh;
+  height: 55vh;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -155,9 +170,9 @@ ABOUT US SECTION
 
 .about-section {
   color: #37000A;
-  height: 80vh;
   padding: 15vh 5vw 10vh;
-  background: rgba(209, 188, 227, 0.25)
+  background: rgb(0, 152, 194, 0.1)
+  /* background: rgba(209, 188, 227, 0.25) */
 }
 
 /*
@@ -166,9 +181,8 @@ OUR SERVICES SECTION
 
 .service-section {
   color: #37000A;
-  height: 80vh;
   padding: 15vh 5vw 10vh;
-  background: rgb(0, 152, 194, 0.1)
+  /* background: rgb(0, 152, 194, 0.1) */
 }
 
 /*
