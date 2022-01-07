@@ -168,16 +168,19 @@ OUR SERVICES SECTION
   color: #37000A;
   height: 80vh;
   padding: 15vh 5vw 10vh;
-  background: rgb(0, 152, 194, 0.25)
+  background: rgb(0, 152, 194, 0.1)
 }
 
 /*
 CONTACT SECTION
 */
 
+.hide {
+  visibility: hidden;
+}
+
 .contact-section {
   color: #fff;
-  height: 75vh;
   padding: 10vh 5vw 5vh;
   background: rgba(58, 66, 154, 0.8);
 }
