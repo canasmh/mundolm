@@ -28,6 +28,10 @@ app.get("/contact", function(req, res) {
   res.render('contact');
 });
 
+app.post("/contact", function(req, res) {
+  res.send("It works!")
+})
+
 
 app.listen(3000, function() {
   console.log("Server running on port 3000");
