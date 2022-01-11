@@ -13,6 +13,9 @@ body {
   letter-spacing: 3px;
 
 }
+/* nav {
+  opacity: 0;
+} */
 
 h1 {
   font-size: 2rem;
@@ -122,7 +125,7 @@ Welcome Section
 
 
 .welcome-section {
-  height: 80vh;
+  min-height: 80vh;
   display: flex;
   background-image: url("../images/phone-call.jpg");
   background-repeat: no-repeat;
@@ -130,9 +133,14 @@ Welcome Section
   background-position: right;
   display: flex;
   color: white;
+  margin-bottom: 10vh;
+  position: relative;
+  right: 100vw;
+  opacity: 0
 }
 
 .welcome-banner {
+  opacity: 0;
   margin: auto 10vw;
   width: 80vw;
   background-color: rgba(0, 190, 244, 0.9);
@@ -146,6 +154,12 @@ Welcome Section
   justify-content: center;
   align-content: center;
   flex-direction: column;
+  position: relative;
+  top: 100vh;
+}
+
+.motto {
+  opacity: 0;
 }
 
 div.welcome-banner h2, hr.welcome-hr {
