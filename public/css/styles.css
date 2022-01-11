@@ -4,9 +4,14 @@
 /* #37000A dark magenta */
 /* #D1BCE3 light-purple*/
 /* #0098c2 pink olive*/
+
+html {
+  -webkit-appearance: none;
+}
 body {
   line-height: 2;
   letter-spacing: 3px;
+
 }
 
 h1 {
@@ -355,6 +360,7 @@ ABOUT page
   font-size: 1.8rem;
   font-weight: 200;
   padding: 0.5rem 3rem;
+  -webkit-appearance: none;
 }
 
 .btn-team:hover {
