@@ -11,13 +11,13 @@ catch (TypeError) {
 
 if (onHomePage) {
   $(document).ready(function() {
-    $('div.welcome-section').animate({left: '0', opacity: 1}, 750)
+    $('div.welcome-section').animate({left: '0', opacity: 1}, 800)
 
   });
 
   setTimeout(function() {
-    $('.welcome-banner').animate({opacity: 1, top: '0'}, 750);
-  }, 650);
+    $('.welcome-banner').animate({opacity: 1, top: '0'}, 700);
+  }, 900);
 
   setTimeout(function() {
     anime.timeline({loop: false})
@@ -30,7 +30,7 @@ if (onHomePage) {
         duration: 800,
         delay: (el, i) => 65*i
       });
-  }, 1500);
+  }, 1900);
 }
 
 
