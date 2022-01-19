@@ -9,7 +9,7 @@
 /* font-family: 'Barlow Condensed', sans-serif; */
 /* font-family: 'Outfit', sans-serif; */
 /* font-family: 'Source Serif Pro', serif; */
-/* font-family: 'The Nautigal', cursive; */
+/* font-family: 'Tangerine', cursive; */
 
 html {
   -webkit-appearance: none;
@@ -32,9 +32,13 @@ h2 {
   text-align: center;
 }
 
+h2, h3, h4, h5, h6 {
+  font-family: 'Source Serif Pro', serif;
+}
+
 p {
   font-size: 1.2rem;
-
+  font-family: 'Montserrat', sans-serif;
 }
 
 hr {
@@ -85,6 +89,7 @@ NAVBAR
 .dropdown-item, .nav-link {
   font-size: 1.2rem;
   color: #3A429A;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .dropdown-item:hover, .nav-link:hover {
@@ -167,6 +172,15 @@ Welcome Section
 
 .motto {
   opacity: 0;
+  font-family: 'Tangerine', cursive;
+  font-size: 2rem;
+}
+
+.welcome {
+  font-family: 'Tangerine', cursive;
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 7px;
 }
 
 div.welcome-banner h2, hr.welcome-hr {
@@ -181,7 +195,8 @@ div.welcome-banner h2, hr.welcome-hr {
 
 .mlm-header {
   color: #3A429A;
-  text-shadow: 1px 1px #000;
+  text-shadow: 5px 1px #000;
+  font-family: 'Outfit', sans-serif;
 }
 
 .welcome-buttons {
@@ -471,4 +486,8 @@ FOOTER
 footer {
   text-align: center;
   margin: 1.2rem 0;
+}
+
+footer p {
+  font-size: 1rem;
 }
