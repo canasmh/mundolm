@@ -298,6 +298,15 @@ OUR SERVICES SECTION
   /* background: rgb(0, 152, 194, 0.1) */
 }
 
+.service-row {
+  text-align: center;
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin: 3.5rem auto 1.2rem;
+}
+
 .team-page {
   color: #37000A;
   padding: 15vh 5vw 10vh;
