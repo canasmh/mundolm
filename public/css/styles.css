@@ -1,6 +1,7 @@
 /* Colors */
 /* #00bef4 sky-blue in logo*/
 /* #3A429A dark-blue in logo*/
+/* #F7212C red in logo  */
 /* #37000A dark magenta */
 /* #D1BCE3 light-purple*/
 /* #0098c2 pink olive*/
@@ -173,7 +174,10 @@ Welcome Section
 .motto {
   opacity: 0;
   font-family: 'Tangerine', cursive;
-  font-size: 2rem;
+  font-size: 2.3rem;
+  color: #FFF;
+  /* #3A429A; */
+  letter-spacing: 7px;
 }
 
 .welcome {
@@ -195,7 +199,7 @@ div.welcome-banner h2, hr.welcome-hr {
 
 .mlm-header {
   color: #3A429A;
-  text-shadow: 5px 1px #000;
+  text-shadow: 3px 1px #000;
   font-family: 'Outfit', sans-serif;
 }
 
@@ -339,6 +343,10 @@ OUR SERVICES SECTION
   height: 8.5rem;
   width: 8.5rem;
   margin: 2.5rem auto;
+}
+
+.team-member p {
+  font-size: 1rem;
 }
 
 @media only screen and (min-width: 992px) {
