@@ -371,8 +371,12 @@ CONTACT SECTION
 
 .contact-section {
   color: #fff;
-  padding: 10vh 5vw 5vh;
+  padding: 10vh 2.5rem 5vh;
   background: rgba(58, 66, 154, 0.8);
+}
+
+.contact-section h3 {
+  text-align: left;
 }
 
 div.contact-section p {
