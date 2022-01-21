@@ -44,6 +44,8 @@ p {
   font-weight: 300;
 }
 
+
+
 hr {
   width: 67%;
   margin: 1.2rem auto;
@@ -397,10 +399,20 @@ div.contact-section .section-header {
   text-align: center;
 }
 
+.phone-link {
+  text-decoration: none;
+  color: #FFF;
+}
+
 .soc-icon {
   font-size: 1.5rem;
   margin: 1rem 1rem 2rem;
   color: #FFF;
+}
+
+.phone-link:hover, .soc-icon:hover {
+  color: #00bef4;
+
 }
 
 .contact-hr {
