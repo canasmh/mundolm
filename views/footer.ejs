@@ -1,26 +1,45 @@
 <!-- TODO: Center the cities in the contact section -->
 
   <div class="contact-section">
-    <h2 class="section-header">Contact Us</h2>
-    <div class="row">
+    <% if (lang=="en") { %>
+      <h2 class="section-header">Contact Us</h2>
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <h3 class='section-header'><i class="fas fa-map-marker-alt hide"></i>Greer</h3>
+          <p><i class="fas fa-map-marker-alt"></i> 100 Arlington Rd. <br>
+             <i class="fas fa-map-marker-alt hide"></i> Greer, SC 29651</p>
+          <p><i class="fas fa-calendar-alt"></i> Mon-Sat: 9:00AM - 6:00PM <br>
+            <i class="fas fa-calendar-alt hide"></i> Sun: Closed</p>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <h3 class='section-header'><i class="fas fa-map-marker-alt hide"></i>Greenville</h3>
+          <p><i class="fas fa-map-marker-alt"></i> 1152 North Pleasantburg Dr. <br>
+             <i class="fas fa-map-marker-alt hide"></i> Greenville, SC 29607</p>
+          <p><i class="fas fa-calendar-alt"></i> Mon-Sat: 9:00AM - 6:00PM <br>
+            <i class="fas fa-calendar-alt hide"></i> Sun: Closed</p>
+        </div>
+      </div>
+    <% } else { %>
+      <h2 class="section-header">Contáctanos</h2>
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <h3 class='section-header'><i class="fas fa-map-marker-alt hide"></i>Greer</h3>
+          <p><i class="fas fa-map-marker-alt"></i> 100 Arlington Rd. <br>
+             <i class="fas fa-map-marker-alt hide"></i> Greer, SC 29651</p>
+          <p><i class="fas fa-calendar-alt"></i> Lun-Sáb: 9:00AM - 6:00PM <br>
+            <i class="fas fa-calendar-alt hide"></i> Dom: Closed</p>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <h3 class='section-header'><i class="fas fa-map-marker-alt hide"></i>Greenville</h3>
+          <p><i class="fas fa-map-marker-alt"></i> 1152 North Pleasantburg Dr. <br>
+             <i class="fas fa-map-marker-alt hide"></i> Greenville, SC 29607</p>
+          <p><i class="fas fa-calendar-alt"></i> Lun-Sáb: 9:00AM - 6:00PM <br>
+            <i class="fas fa-calendar-alt hide"></i> Dom: Closed</p>
+        </div>
+      </div>
+    <% } %>
 
-    </div>
-    <div class="row">
-      <div class="col-lg-6 col-md-6">
-        <h3 class='section-header'><i class="fas fa-map-marker-alt hide"></i>Greer</h3>
-        <p><i class="fas fa-map-marker-alt"></i> 100 Arlington Rd. <br>
-           <i class="fas fa-map-marker-alt hide"></i> Greer, SC 29651</p>
-        <p><i class="fas fa-calendar-alt"></i> Mon-Sat: 9:00AM - 6:00PM <br>
-          <i class="fas fa-calendar-alt hide"></i> Sun: Closed</p>
-      </div>
-      <div class="col-lg-6 col-md-6">
-        <h3 class='section-header'><i class="fas fa-map-marker-alt hide"></i>Greenville</h3>
-        <p><i class="fas fa-map-marker-alt"></i> 1152 North Pleasantburg Dr. <br>
-           <i class="fas fa-map-marker-alt hide"></i> Greenville, SC 29607</p>
-        <p><i class="fas fa-calendar-alt"></i> Mon-Sat: 9:00AM - 6:00PM <br>
-          <i class="fas fa-calendar-alt hide"></i> Sun: Closed</p>
-      </div>
-    </div>
+
     <hr class="contact-hr">
     <div class="row">
       <div class="col-12 soc-icon-container">
