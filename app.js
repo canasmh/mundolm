@@ -5,14 +5,13 @@ const ejs = require("ejs")
 const app = express();
 
 var lang = "en"
-var langButton = "En español"
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 app.get("/", function(req, res) {
-  res.render('index', {lang: lang, langButton: langButton});
+  res.render('index', {lang: lang});
 });
 
 app.get("/about", function(req, res) {
