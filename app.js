@@ -15,8 +15,10 @@ var navEs = ["Acerca de", "Seguros", "Conseguir Cotización", "Realizar un pago"
 var nav = navEn
 
 //Index
-var welcomeEn = ["Welcome", "...We serve with joy! 😊", "En español", "Get Quote"]
-var welcomeEs = ["Bienvenidos", "...Servimos con alegría 😊", "In English", "Conseguir Cotización"]
+var welcomeEn = ["Welcome", "...We serve with joy! 😊", "En español",
+"Get Quote"]
+var welcomeEs = ["Bienvenidos", "...Servimos con alegría 😊", "In English",
+"Conseguir Cotización"]
 var welcome = ""
 var aboutEn = ["About Us", "Mundo Latino Multiservices, MLM, has as its mission, \
 to take advantage of the wonderful opportunity to love through SERVICE. At MLM, \
@@ -27,7 +29,8 @@ var aboutEs = ["Acerca de Nosotros", "Mundo Latino Multiservicios, MLM, tiene \
 como misión, aprovechar la maravillosa oportunidad de amar, a través del SERVICIO. \
 En MLM, estamos dispuestos a ejecutar con", "alegría, entusiasmo y eficiencia,",
 "todos los servicios que en el ofrecemos. Brindamos a nuestros clientes, la \
-confianza de poder contar con nosotros, pues nuestro", "SERVICIO", " es incondicional."]
+confianza de poder contar con nosotros, pues nuestro", "SERVICIO", " es \
+incondicional."]
 var about = ""
 
 
@@ -44,7 +47,13 @@ app.get("/", function(req, res) {
     welcome = welcomeEs
     about = aboutEs
   }
-  res.render('index', {lang: lang, title: title, nav: nav, welcome: welcome, about: about});
+  res.render('index', {
+    lang: lang,
+    title: title,
+    nav: nav,
+    welcome: welcome,
+    about: about
+  });
 });
 
 app.get("/about", function(req, res) {
