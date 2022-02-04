@@ -16,19 +16,19 @@ app.get("/", function(req, res) {
 });
 
 app.get("/about", function(req, res) {
-  res.render('about');
+  res.render('about', {lang: lang});
 });
 
 app.get("/make-payment", function(req, res) {
-  res.render('make-payment');
+  res.render('make-payment', {lang: lang});
 });
 
 app.get("/contact", function(req, res) {
-  res.render('contact');
+  res.render('contact', {lang: lang});
 });
 
 app.post("/contact", function(req, res) {
-  res.send("It works!")
+  res.send("It works!", {lang: lang})
 })
 
 app.get("/es", function(req, res) {

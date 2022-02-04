@@ -19,14 +19,21 @@
 
 <div class="about-section">
   <img class="team-img"src="images/group-pic.png" alt="team-img">
-  <h2 class="section-header">About Us</h2>
-  <p>Mundo Latino Multiservicios, MLM, tiene como misión, aprovechar la maravillosa
-    oportunidad de amar, a través del SERVICIO. En MLM, estamos dispuestos a ejecutar
-    con <b>alegría, entusiasmo y eficiencia, </b>todos los servicios que en el ofrecemos.
-    Brindamos a nuestros clientes, la confianza de poder contar con nosotros,
-    pues nuestro <i>SERVICIO</i> es incondicional, lo que nos permite verificar cada día
-    la capacidad, que tenemos de Servir a los demás, dándole gracias al Creador
-    por estar a su Servicio.</p>
+  <% if (lang=="en")  { %>
+    <h2 class="section-header">About Us</h2>
+    <p>Mundo Latino Multiservices, MLM, has as its mission, to take advantage of
+      the wonderful opportunity to love through SERVICE. At MLM, we serve with
+      <b>joy, enthusiasm and efficiency,</b> on all the services that we offer.
+      We offer our clients the confidence of being able to count on us, because
+      our <i>SERVICE</i> is unconditional.</p>
+  <% } else { %>
+    <h2 class="section-header">Acerca de</h2>
+    <p>Mundo Latino Multiservicios, MLM, tiene como misión, aprovechar la maravillosa
+      oportunidad de amar, a través del SERVICIO. En MLM, estamos dispuestos a ejecutar
+      con <b>alegría, entusiasmo y eficiencia, </b>todos los servicios que en el ofrecemos.
+      Brindamos a nuestros clientes, la confianza de poder contar con nosotros,
+      pues nuestro <i>SERVICIO</i> es incondicional.</p>
+  <% }; %>
 </div>
 
 <div class="service-section">
