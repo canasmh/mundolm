@@ -298,7 +298,7 @@ div.about-section p {
 
 @media only screen and (min-width: 600px) {
   .team-img {
-    margin: 2rem auto 5rem;
+    margin: 2rem auto 1rem;
     width: 20rem;
     height: 20rem;
     border-radius: 15px;
@@ -307,10 +307,8 @@ div.about-section p {
 
 @media only screen and (min-width: 992px) {
   .team-img {
-    /* width: 20rem;
-    height: 20rem; */
     float: right;
-    margin-left: 5rem;
+    margin: 2rem 2.5rem ;
   }
   div.about-section p {
     text-align: justify;
