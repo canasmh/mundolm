@@ -3,15 +3,29 @@
 <div class="welcome-section">
   <div class="row">
     <div class="welcome-banner col-lg-6">
-      <h2 class="welcome">Welcome</h2>
-      <hr class="welcome-hr">
-      <h1 class="mlm-header">Mundo Latino <br>Multiservicios...</h1>
-      <hr>
-      <p class="motto">...We serve with joy! 😊</p>
-      <div class="welome-buttons">
-        <a class="btn es-btn" href="/es"><%= langButton %></a>
-        <a class="btn quote-btn" href=" https://85f00e01-2392-47d4-a0f1-c2f3fd16b23c.quotes.iwantinsurance.com/auto">Get Quote</a>
-      </div>
+      <% if (lang=="en") { %>
+        <h2 class="welcome">Welcome</h2>
+        <hr class="welcome-hr">
+        <h1 class="mlm-header">Mundo Latino <br>Multiservicios...</h1>
+        <hr>
+        <p class="motto">...We serve with joy! 😊</p>
+        <div class="welome-buttons">
+          <a class="btn es-btn" href="/es">En español</a>
+          <a class="btn quote-btn" href=" https://85f00e01-2392-47d4-a0f1-c2f3fd16b23c.quotes.iwantinsurance.com/auto">Get Quote</a>
+        </div>
+      <% } else { %>
+        <h2 class="welcome">Bienvenidos</h2>
+        <hr class="welcome-hr">
+        <h1 class="mlm-header">Mundo Latino <br>Multiservicios...</h1>
+        <hr>
+        <p class="motto">...Servimos con alegría! 😊</p>
+        <div class="welome-buttons">
+          <a class="btn es-btn" href="/es">In English</a>
+          <a class="btn quote-btn" href=" https://85f00e01-2392-47d4-a0f1-c2f3fd16b23c.quotes.iwantinsurance.com/auto">Cotización</a>
+        </div>
+      <% } %>
+
+
     </div>
 
   </div>
