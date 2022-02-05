@@ -3,29 +3,15 @@
 <div class="welcome-section">
   <div class="row">
     <div class="welcome-banner col-lg-6">
-      <% if (lang=="en") { %>
-        <h2 class="welcome">Welcome</h2>
-        <hr class="welcome-hr">
-        <h1 class="mlm-header">Mundo Latino <br>Multiservicios...</h1>
-        <hr>
-        <p class="motto">...We serve with joy! 😊</p>
-        <div class="welome-buttons">
-          <a class="btn es-btn" href="/es">En español</a>
-          <a class="btn quote-btn" href=" https://85f00e01-2392-47d4-a0f1-c2f3fd16b23c.quotes.iwantinsurance.com/auto">Get Quote</a>
-        </div>
-      <% } else { %>
-        <h2 class="welcome">Bienvenidos</h2>
-        <hr class="welcome-hr">
-        <h1 class="mlm-header">Mundo Latino <br>Multiservicios...</h1>
-        <hr>
-        <p class="motto">...Servimos con alegría! 😊</p>
-        <div class="welome-buttons">
-          <a class="btn es-btn" href="/es">In English</a>
-          <a class="btn quote-btn" href=" https://85f00e01-2392-47d4-a0f1-c2f3fd16b23c.quotes.iwantinsurance.com/auto">Conseguir Cotización</a>
-        </div>
-      <% } %>
-
-
+      <h2 class="welcome"><%= welcome[0] %></h2>
+      <hr class="welcome-hr">
+      <h1 class="mlm-header">Mundo Latino <br>Multiservicios...</h1>
+      <hr>
+      <p class="motto"><%= welcome[1] %></p>
+      <div class="welome-buttons">
+        <a class="btn es-btn" href="/es"><%= welcome[2] %></a>
+        <a class="btn quote-btn" href=" https://85f00e01-2392-47d4-a0f1-c2f3fd16b23c.quotes.iwantinsurance.com/auto"><%= welcome[3] %></a>
+      </div>
     </div>
 
   </div>
@@ -33,134 +19,23 @@
 
 <div class="about-section">
   <img class="team-img"src="images/group-pic.png" alt="team-img">
-  <% if (lang=="en")  { %>
-    <h2 class="section-header">About Us</h2>
-    <p>Mundo Latino Multiservices, MLM, has as its mission, to take advantage of
-      the wonderful opportunity to love through SERVICE. At MLM, we serve with
-      <b>joy, enthusiasm and efficiency,</b> on all the services that we offer.
-      We offer our clients the confidence of being able to count on us, because
-      our <i>SERVICE</i> is unconditional.</p>
-  <% } else { %>
-    <h2 class="section-header">Acerca de</h2>
-    <p>Mundo Latino Multiservicios, MLM, tiene como misión, aprovechar la maravillosa
-      oportunidad de amar, a través del SERVICIO. En MLM, estamos dispuestos a ejecutar
-      con <b>alegría, entusiasmo y eficiencia, </b>todos los servicios que en el ofrecemos.
-      Brindamos a nuestros clientes, la confianza de poder contar con nosotros,
-      pues nuestro <i>SERVICIO</i> es incondicional.</p>
-  <% }; %>
+    <h2 class="section-header"><%= about[0] %></h2>
+    <p><%= about[1] %> <b><%= about[2] %></b> <%= about[3] %> <i><%= about[4] %></i> <%= about[5] %></p>
 </div>
 
 <div class="service-section">
-  <% if (lang=="en") { %>
-    <h2 class="section-header">Our Services</h2>
-    <p>We cover your needs of:</p>
-    <div class="row service-row">
-      <div class="col-lg-3 col-md-4 col-sm-12" style="text-align: center;">
-        <i class="service-icon fas fa-shield"></i>
-        <h4>Insurance</h4>
-        <h6 >Car, Home, Apartments, Workers Comp., General Liability, Commercial Auto</h6>
-      </div>
+  <h2 class="section-header"><%= services[0] %></h2>
+  <p><%= services[1] %></p>
+  <div class="row service-row">
+    <% for (i=0; i < allServices.length; i++) {%>
       <div class="col-lg-3 col-md-4 col-sm-12">
-        <i class="service-icon fas fa-car"></i>
-        <h4>DMV Transactions</h4>
-        <h6>License Plates, Transfers, Vehicle Registration, Decal Renewal, Automobile, Motorcycle, Trailer, Boat, Jet Ski</h6>
+        <i class="service-icon fas <%= allServices[i].icon %>"></i>
+        <h4><%= allServices[i].name %></h4>
+        <h6><%= allServices[i].description %></h6>
       </div>
-      <div class="col-lg-3 col-md-4 col-sm-12">
-        <i class="service-icon fad fa-copy"></i>
-        <h4>Document Services</h4>
-        <h6>Fax, Copy, E-Mails, Translations, etc.</h6>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-12">
-        <i class="service-icon fas fa-suitcase-rolling"></i>
-        <h4>Travel Tickets</h4>
-        <h6>Air, Sea and Land</h6>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-12">
-        <i class="service-icon fas fa-stamp"></i>
-        <h4>Public Notary, Marriage Officiant</h4>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-12">
-        <i class="service-icon fas fa-money-check"></i>
-        <h4>Money Order</h4>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-12">
-        <i class="service-icon fas fa-envelope-open-dollar"></i>
-        <h4>Wire Transfers</h4>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-12">
-        <i class="service-icon fas fa-file-invoice-dollar"></i>
-        <h4>Bill Payments</h4>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-12">
-        <i class="service-icon fas fa-money-check-edit-alt"></i>
-        <h4>Cash Checks</h4>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-12">
-        <i class="service-icon fas fa-box-open"></i>
-        <h4>Shipping to Central & South America</h4>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-12">
-        <i class="service-icon fas fa-mobile"></i>
-        <h4>Buy, Activate, or Recharge Cell Phone</h4>
-      </div>
-    </div>
-    <p class='many-more'>... and many more!</p>
-  <% } else { %>
-    <h2 class="section-header">Nuestros Servicios</h2>
-    <p>Cubrimos sus necesidades de:</p>
-    <div class="row service-row">
-      <div class="col-lg-3 col-md-4 col-sm-12" style="text-align: center;">
-        <i class="service-icon fas fa-shield"></i>
-        <h4>Seguros</h4>
-        <h6 >Auto, Casa, Apartamentos, Workers Comp., General Liability, Auto Comercial </h6>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-12">
-        <i class="service-icon fas fa-car"></i>
-        <h4>Transacciones del DMV</h4>
-        <h6>Placas, Transferencias, Registro de Auto, Renovación de Sticker, Autos, Motos, Tráiler, Lancha, Jet Ski</h6>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-12">
-        <i class="service-icon fad fa-copy"></i>
-        <h4>Servicios de documentos</h4>
-        <h6>Fax, Copiar, Correo Electrónico, Traducciones, etc.</h6>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-12">
-        <i class="service-icon fas fa-suitcase-rolling"></i>
-        <h4>Boletos de viaje</h4>
-        <h6>Aire, Mar y Tierra</h6>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-12">
-        <i class="service-icon fas fa-stamp"></i>
-        <h4>Notario Público, Oficiante de Matrimonios</h4>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-12">
-        <i class="service-icon fas fa-money-check"></i>
-        <h4>Money Order</h4>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-12">
-        <i class="service-icon fas fa-envelope-open-dollar"></i>
-        <h4>Envíos de dinero</h4>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-12">
-        <i class="service-icon fas fa-file-invoice-dollar"></i>
-        <h4>Pagos de Biles</h4>
-        <h6>Estatales, Nacionales e Internacionales</h6>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-12">
-        <i class="service-icon fas fa-money-check-edit-alt"></i>
-        <h4>Cheques en Efectivo</h4>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-12">
-        <i class="service-icon fas fa-box-open"></i>
-        <h4>Paqueteria, Sobres a Centro y Sur America</h4>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-12">
-        <i class="service-icon fas fa-mobile"></i>
-        <h4>Venta, Activación y Recarga de Celulares</h4>
-      </div>
-    </div>
-    <p class='many-more'>... y muchos mas!</p>
-  <% } %>
+    <% }; %>
+    <p class='many-more'><%= services[2] %></p>
+  </div>
 </div>
 
 <%- include("footer") -%>
