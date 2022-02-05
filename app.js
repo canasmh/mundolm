@@ -36,9 +36,10 @@ var lang = "es";
 var titleEn = "Welcome | MLM";
 var titleEs = "Bienvenidos | MLM";
 
-var navEn = ["About", "Insurance", "Get a Quote", "Make a Payment", "Contact"];
+var navEn = ["About", "Insurance", "Get a Quote", "Make a Payment", "Contact",
+"En español"];
 var navEs = ["Acerca de", "Seguros", "Conseguir Cotización", "Realizar un pago",
-"Contacto"];
+"Contacto", "In English"];
 
 
 //Index

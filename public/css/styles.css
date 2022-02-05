@@ -115,6 +115,23 @@ NAVBAR
   width: 100%;
 }
 
+.lang-nav {
+  background-color: #3A429A;
+}
+
+.lang-link {
+  color: #FFF;
+}
+
+.lang-nav:hover {
+  background-color: #00bef4;
+}
+
+.lang-link:hover {
+  color: #FFF;
+}
+
+
 @media only screen and (min-width: 992px) {
   .nav-logo {
     height: 3.5rem;
