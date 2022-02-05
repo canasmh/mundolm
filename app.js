@@ -32,14 +32,14 @@ class ContactFormEntry {
 }
 
 // Header
-var lang = "en";
+var lang = "es";
 var titleEn = "Welcome | MLM";
 var titleEs = "Bienvenidos | MLM";
-var title = titleEn;
+
 var navEn = ["About", "Insurance", "Get a Quote", "Make a Payment", "Contact"];
 var navEs = ["Acerca de", "Seguros", "Conseguir Cotización", "Realizar un pago",
 "Contacto"];
-var nav = navEn;
+
 
 //Index
 var welcomeEn = ["Welcome", "...We serve with joy! 😊", "En español",
@@ -190,7 +190,17 @@ var message = messageEn
 // FOOTER
 var footerEn = ["Contact Us", "Mon-Sat", "Sun"]
 var footerEs = ["Contáctanos", "Lun-Sáb", "Dom"]
-var footer = footerEn
+
+if (lang=="en") {
+  var title = titleEn;
+  var nav = navEn;
+  var footer = footerEn;
+} else {
+  var title = titleEs;
+  var nav = navEs;
+  var footer = footerEs;
+}
+
 
 app.get("/", function(req, res) {
 
