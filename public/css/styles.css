@@ -152,9 +152,8 @@ Welcome Section
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
-  display: flex;
   color: white;
-  margin-bottom: 10vh;
+  margin-bottom: 2vh;
   position: relative;
   right: 100vw;
   opacity: 0
@@ -247,10 +246,31 @@ div.welcome-banner h2, hr.welcome-hr {
   color: #3A429A;
 }
 
+.scroll-down-div {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  opacity: 0;
+  top: 100vh;
+}
+
+.scroll-down-arrow {
+  color: #00bef4;
+  font-size: 2.5rem;
+  /* margin-bottom: 3rem; */
+}
+
+.scroll-down-arrow:hover {
+  color: #3A429A;
+  font-size: 2.7rem;
+}
+
 
 @media only screen and (min-width: 600px) {
   .welcome-banner {
     width: 30rem;
+
     margin: auto 20vw;
   }
 }
@@ -272,17 +292,22 @@ ABOUT US SECTION
 
 .about-section {
   color: #37000A;
-  padding: 2.5rem 5vw 3rem;
+  padding: 6rem 1.5rem;
   background: rgba(0, 152, 194, 0.1);
-  min-height: 75vh;
+  min-height: 85vh;
   text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  .about-section {
+    padding: 8rem 4.5rem;
+  }
 }
 
 @media only screen and (min-width: 992px) {
   .about-section {
-    padding: 15vh 10vw 10vh;
+    padding: 10rem 6rem;
   }
-
 }
 
 .team-img {

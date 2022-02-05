@@ -17,6 +17,7 @@ if (onHomePage) {
 
   setTimeout(function() {
     $('.welcome-banner').animate({opacity: 1, top: '0'}, 700);
+    $('.scroll-down-div').animate({opacity: 1, top: '0'}, 700)
   }, 900);
 
   setTimeout(function() {
@@ -36,6 +37,12 @@ if (onHomePage) {
 
 
 $('.team-btn-div').click(function() {
-  let element = document.getElementsByClassName("team-page")[0];
-  element.scrollIntoView({behavior: "smooth"});
+  let teamPage = document.getElementsByClassName("team-page")[0];
+  teamPage.scrollIntoView({behavior: "smooth"});
+});
+
+$('.scroll-down-arrow').click(function() {
+  let aboutUs = document.getElementsByClassName("about-section")[0];
+  aboutUs.scrollIntoView({behavior: "smooth"});
+
 });
