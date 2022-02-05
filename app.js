@@ -102,7 +102,9 @@ var allServicesEs = [serviceOneEs, serviceTwoEs, serviceThreeEs, serviceFourEs,
 
 var allServices = allServicesEn
 
-var serviceIcons = ["fa-"]
+var footerEn = ["Contact Us", "Mon-Sat", "Sun"]
+var footerEs = ["Contáctanos", "Lun-Sáb", "Dom"]
+var footer = footerEn
 
 
 
@@ -113,6 +115,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 app.get("/", function(req, res) {
+
   if (lang == "en") {
     welcome = welcomeEn;
     about = aboutEn;
@@ -124,6 +127,7 @@ app.get("/", function(req, res) {
     services = servicesEs
     allServices = allServicesEs
   }
+
   res.render('index', {
     lang: lang,
     title: title,
@@ -131,24 +135,25 @@ app.get("/", function(req, res) {
     welcome: welcome,
     about: about,
     services: services,
-    allServices: allServices
+    allServices: allServices,
+    footer: footer
   });
 });
 
 app.get("/about", function(req, res) {
-  res.render('about', {lang: lang, title: title, nav: nav});
+  res.render('about', {lang: lang, title: title, nav: nav, footer: footer});
 });
 
 app.get("/make-payment", function(req, res) {
-  res.render('make-payment', {lang: lang, title: title, nav: nav});
+  res.render('make-payment', {lang: lang, title: title, nav: nav, footer: footer});
 });
 
 app.get("/contact", function(req, res) {
-  res.render('contact', {lang: lang, title: title, nav: nav});
+  res.render('contact', {lang: lang, title: title, nav: nav, footer: footer});
 });
 
 app.post("/contact", function(req, res) {
-  res.send("It works!", {lang: lang})
+  res.send("It works!")
 })
 
 app.get("/es", function(req, res) {
@@ -156,12 +161,12 @@ app.get("/es", function(req, res) {
     lang="es"
     title=titleEs
     nav=navEs
-  }
-
-  else {
+    footer=footerEs
+  } else {
     lang="en"
     title=titleEn
     nav=navEn
+    footer=footerEn
   }
 
   res.redirect("/")
