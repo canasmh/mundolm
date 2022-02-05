@@ -154,7 +154,7 @@ Welcome Section
   background-position: right;
   display: flex;
   color: white;
-  margin-bottom: 10vh;
+  margin-bottom: 2vh;
   position: relative;
   right: 100vw;
   opacity: 0
@@ -247,10 +247,23 @@ div.welcome-banner h2, hr.welcome-hr {
   color: #3A429A;
 }
 
+.scroll-down-div {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.scroll-down-arrow {
+  color: #00bef4;
+  font-size: 3rem;
+
+}
+
 
 @media only screen and (min-width: 600px) {
   .welcome-banner {
     width: 30rem;
+
     margin: auto 20vw;
   }
 }
