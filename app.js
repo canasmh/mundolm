@@ -141,14 +141,14 @@ person for more than four years and now offers us her great service virtually. \
 Yuri is agile, attentive and with a great commitment not only to our clients, \
 but also to Mundo Latino Multiservicios.", "images/team-img-test.png")
 var teamMemberOneEs = new TeamMember("Victor and Yaneth", "Victor y Yaneth, \
-llevaban varios anos viviendo en Greer y veían la necesidad de que tenia la \
+llevaban varios años viviendo en Greer y veían la necesidad de que tenia la \
 comunidad hispana de tener un lugar donde, se les hablara el mismo idioma y \
 donde sus necesidades fueran cubiertas en su totalidad. Motivados por esa gran \
 necesidad, que el día 27 de noviembre, Mundo Latino Multiservicios abrió sus \
 puertas a esa hermosa y valiente comunidad Hispana y a todo aquel, que necesitara \
 de nuestros servicios.", "images/team-img-test.png")
 var teamMemberTwoEs = new TeamMember("Nohemí Riaño", "Nohemí es una joven y \
-carismática mujer, oriunda de México, con mas de cinco anos de experiencia y \
+carismática mujer, oriunda de México, con mas de cinco años de experiencia y \
 conocimiento de nuestros productos. Esto hace que tenga una excelente atención a \
 nuestro cliente y un ágil desenvolvimiento en sus servicio.",
 "images/team-img-test.png")
