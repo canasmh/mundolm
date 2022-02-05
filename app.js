@@ -4,12 +4,31 @@ const ejs = require("ejs")
 
 const app = express();
 
-var lang = "en";
+app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static("public"));
+
+class Service {
+  constructor(name, description, icon) {
+    this.name = name;
+    this.description = description;
+    this.icon = icon
+  }
+}
+
+class Team Member {
+  constructor(name, description, img) {
+    this.name = name
+    this.description = description
+    this.img = img
+  }
+}
+
 // Header
+var lang = "en";
 var titleEn = "Welcome | MLM";
 var titleEs = "Bienvenidos | MLM";
 var title = titleEn;
-
 var navEn = ["About", "Insurance", "Get a Quote", "Make a Payment", "Contact"];
 var navEs = ["Acerca de", "Seguros", "Conseguir Cotización", "Realizar un pago",
 "Contacto"];
@@ -21,7 +40,6 @@ var welcomeEn = ["Welcome", "...We serve with joy! 😊", "En español",
 var welcomeEs = ["Bienvenidos", "...Servimos con alegría 😊", "In English",
 "Conseguir Cotización"];
 var welcome = "";
-
 var aboutEn = ["About Us", "Mundo Latino Multiservices, MLM, has as its mission, \
 to take advantage of the wonderful opportunity to love through SERVICE. At MLM, \
 we serve with", "joy, enthusiasm and efficiency,", "on all the services that we \
@@ -34,22 +52,10 @@ En MLM, estamos dispuestos a ejecutar con", "alegría, entusiasmo y eficiencia,"
 confianza de poder contar con nosotros, pues nuestro", "SERVICIO", " es \
 incondicional."];
 var about = "";
-
-
-
 var servicesEn = ["Our Services", "We cover your needs of:", "...and many more!"];
 var servicesEs = ["Nuestros Servicios", "Cubrimos sus necesidades de:",
 "... y muchos mas!"];
 var services = servicesEn
-
-class Service {
-  constructor(name, description, icon) {
-    this.name = name;
-    this.description = description;
-    this.icon = icon
-  }
-}
-
 var serviceOneEn = new Service("Insurance", "Car, Home, Apartments, Workers Comp., \
 General Liability, Commercial Auto", "fa-shield")
 var serviceTwoEn = new Service("DMV Transactions", "License Plates, Transfers, \
@@ -69,12 +75,9 @@ var serviceTenEn = new Service("Shipping to Central & South America", "",
 "fa-box-open")
 var serviceElevenEn = new Service("Buy, Activate, or Recharge Cell Phone", "",
 "fa-mobile")
-
 var allServicesEn = [serviceOneEn, serviceTwoEn, serviceThreeEn, serviceFourEn,
   serviceFiveEn, serviceSixEn, serviceEightEn, serviceNineEn, serviceTenEn,
   serviceElevenEn]
-
-
 var serviceOneEs = new Service("Seguros", "Auto, Casa, Apartamentos, Workers \
 Comp., General Liability, Auto Comercial ", "fa-shield")
 var serviceTwoEs = new Service("Transacciones del DMV", "Placas, Transferencias, \
@@ -95,24 +98,20 @@ var serviceTenEs = new Service("Paqueteria, Sobres a Centro y Sur America", "",
 "fa-box-open")
 var serviceElevenEs = new Service("Venta, Activación y Recarga de Celulares", "",
 "fa-mobile")
-
 var allServicesEs = [serviceOneEs, serviceTwoEs, serviceThreeEs, serviceFourEs,
   serviceFiveEs, serviceSixEs, serviceEightEs, serviceNineEs, serviceTenEs,
   serviceElevenEs]
-
 var allServices = allServicesEn
 
+// OUR TEAM
+var ourTeamEn = "Our Team"
+var ourTeamEs = "Nuestro Equipo"
+var ourTeam = ourTeamEn
+
+// FOOTER
 var footerEn = ["Contact Us", "Mon-Sat", "Sun"]
 var footerEs = ["Contáctanos", "Lun-Sáb", "Dom"]
 var footer = footerEn
-
-
-
-
-
-app.set('view engine', 'ejs');
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static("public"));
 
 app.get("/", function(req, res) {
 
