@@ -24,6 +24,13 @@ class TeamMember {
   }
 }
 
+class ContactFormEntry {
+  constructor(label, placeholder) {
+    this.label = label
+    this.placeholder = placeholder
+  }
+}
+
 // Header
 var lang = "en";
 var titleEn = "Welcome | MLM";
@@ -165,6 +172,21 @@ var teamMembersEs = [teamMemberOneEs, teamMemberTwoEs, teamMemberThreeEs,
   teamMemberFourEs, teamMemberFiveEs]
 var teamMembers = teamMembersEn
 
+// CONTACT
+var contactUsEn = ["Have a Question?", "Send Message"]
+var contactUsEs = ["Preguntas?", "Enviar Mensaje"]
+var fullNameEn = new ContactFormEntry("Full Name", "Your Full Name")
+var emailEn = new ContactFormEntry("Email/Phone", "Enter email or phone")
+var messageEn = new ContactFormEntry("Message", "Write your message here...")
+var fullNameEs = new ContactFormEntry("Nombre Completo", "Su nombre completo")
+var emailEs = new ContactFormEntry("Correo Electrónico o Teléfono", "Ingrese \
+correo electrónico o teléfono")
+var messageEs = new ContactFormEntry("Mensaje", "Ingrese su mensaje aquí...")
+
+var contactUs = contactUsEn
+var fullName = fullNameEn
+var email = emailEn
+var message = messageEn
 // FOOTER
 var footerEn = ["Contact Us", "Mon-Sat", "Sun"]
 var footerEs = ["Contáctanos", "Lun-Sáb", "Dom"]
@@ -180,8 +202,8 @@ app.get("/", function(req, res) {
   } else {
     welcome = welcomeEs;
     about = aboutEs;
-    services = servicesEs
-    allServices = allServicesEs
+    services = servicesEs;
+    allServices = allServicesEs;
   }
 
   res.render('index', {
@@ -198,11 +220,11 @@ app.get("/", function(req, res) {
 
 app.get("/about", function(req, res) {
   if (lang=="en") {
-    ourTeam = ourTeamEn
-    teamMembers = teamMembersEn
+    ourTeam = ourTeamEn;
+    teamMembers = teamMembersEn;
   } else {
-    ourTeam = ourTeamEs
-    teamMembers = teamMembersEs
+    ourTeam = ourTeamEs;
+    teamMembers = teamMembersEs;
   }
   res.render('about', {
     lang: lang,
@@ -218,7 +240,26 @@ app.get("/make-payment", function(req, res) {
 });
 
 app.get("/contact", function(req, res) {
-  res.render('contact', {lang: lang, title: title, nav: nav, footer: footer});
+  if (lang=="en") {
+    contactUs = contactUsEn;
+    fullName = fullNameEn;
+    email = emailEn;
+    message = messageEn;
+  } else {
+    contactUs = contactUsEs;
+    fullName = fullNameEs;
+    email = emailEs;
+    message = messageEs;
+  }
+  res.render('contact', {
+    lang: lang,
+    title: title,
+    nav: nav,
+    contactUs: contactUs,
+    fullName: fullName,
+    email: email,
+    message: message,
+    footer: footer});
 });
 
 app.post("/contact", function(req, res) {
