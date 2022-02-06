@@ -282,6 +282,7 @@ div.welcome-banner h2, hr.welcome-hr {
 .scroll-down-arrow:hover {
   color: #3A429A;
   font-size: 2.7rem;
+  cursor: pointer;
 }
 
 
