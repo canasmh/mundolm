@@ -116,7 +116,7 @@ NAVBAR
 }
 
 .lang-nav {
-  background-color: #3A429A;
+  background-color: #00bef4;
 }
 
 .lang-link {
@@ -124,11 +124,10 @@ NAVBAR
 }
 
 .lang-nav:hover {
-  background-color: #00bef4;
 }
 
 .lang-link:hover {
-  color: #FFF;
+  color: #3A429A;
 }
 
 
