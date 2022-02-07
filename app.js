@@ -267,6 +267,7 @@ app.get("/contact", function(req, res) {
     message = messageEs;
   }
   res.render('contact', {
+    method: "get",
     lang: lang,
     title: title,
     nav: nav,
@@ -278,17 +279,18 @@ app.get("/contact", function(req, res) {
 });
 
 app.post("/contact", function(req, res) {
-  let transporter = nodemailer.createTransport({
+
+  var transporter = nodemailer.createTransport({
     host: 'mail.mundolm.com',
     port: 465,
     secure: true,
     auth: {
       user: process.env.USER_EMAIL,
-      pass: process.env.PASS,
+      pass: process.env.USER_PASS
     }
   });
 
-  let mailOptions = {
+  var mailOptions = {
     from: process.env.USER_EMAIL,
     to: 'clientes@mundolm.com',
     subject: 'Test',
@@ -297,9 +299,33 @@ app.post("/contact", function(req, res) {
 
   transporter.sendMail(mailOptions, function(error, info) {
     if (error) {
-      console.log(error);
+      console.log("Error sending email: " + error)
+      res.redirect("/contact", {
+        method: "post",
+        error: true,
+        lang: lang,
+        title: title,
+        nav: nav,
+        contactUs: contactUs,
+        fullName: fullName,
+        email: email,
+        message: message,
+        footer: footer
+      })
     } else {
       console.log('Email sent: ' + info.response);
+      res.redirect("/contact", {
+        method: "post",
+        error: false,
+        lang: lang,
+        title: title,
+        nav: nav,
+        contactUs: contactUs,
+        fullName: fullName,
+        email: email,
+        message: message,
+        footer: footer
+      })
     }
   });
 });
