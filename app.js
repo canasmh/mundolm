@@ -279,7 +279,9 @@ app.get("/contact", function(req, res) {
 
 app.post("/contact", function(req, res) {
   let transporter = nodemailer.createTransport({
-    service: 'customDomain',
+    host: 'mail.mundolm.com',
+    port: 465,
+    secure: true,
     auth: {
       user: process.env.USER_EMAIL,
       pass: process.env.PASS,
@@ -289,8 +291,8 @@ app.post("/contact", function(req, res) {
   let mailOptions = {
     from: process.env.USER_EMAIL,
     to: 'clientes@mundolm.com',
-    subject: 'Pregunta',
-    text: 'Una pregunta de cliente'
+    subject: 'Test',
+    text: 'test email'
   }
 
   transporter.sendMail(mailOptions, function(error, info) {
