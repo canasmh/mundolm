@@ -188,6 +188,15 @@ var emailEs = new ContactFormEntry("Correo Electrónico o Teléfono", "Ingrese \
 correo electrónico o teléfono");
 var messageEs = new ContactFormEntry("Mensaje", "Ingrese su mensaje aquí...");
 
+var successEn = "Your message was sent successfully!"
+var successEs = "¡Su mensaje fue enviado exitosamente!"
+
+var errorEn = "There was an error. Please try again later."
+var errorEs = "Hubo un error. Por favor, inténtelo de nuevo más tarde."
+
+var successMessage = successEn
+var errorMessage = errorEn
+
 var contactUs = contactUsEn;
 var fullName = fullNameEn;
 var email = emailEn;
@@ -296,7 +305,7 @@ app.post("/contact", function(req, res) {
 
   var mailOptions = {
     from: process.env.USER_EMAIL,
-    to: 'canasmh@yahoo.com',
+    to: 'clientes@mundolm.com',
     subject: 'PREGUNTA DE CLIENTE',
     text: "PREGUNTA DE: " + nameFromForm + "\n\n" + messageFromForm + "\n\nCONTACT: "
     + emailFromForm
@@ -312,10 +321,16 @@ app.post("/contact", function(req, res) {
 });
 
 app.get('/success', function(req, res) {
+  if (lang=="en") {
+    successMessage = successEn
+  } else {
+    successMessage = successEs
+  }
   res.render('success', {
     lang: lang,
     title: title,
     nav: nav,
+    alert: successMessage,
     contactUs: contactUs,
     fullName: fullName,
     email: email,
@@ -325,10 +340,16 @@ app.get('/success', function(req, res) {
 });
 
 app.get('/failure', function(req, res) {
+  if (lang=="en") {
+    errorMessage = errorEn
+  } else {
+    errorMessage = errorEs
+  }
   res.render('failure', {
     lang: lang,
     title: title,
     nav: nav,
+    alert: errorMessage,
     contactUs: contactUs,
     fullName: fullName,
     email: email,
