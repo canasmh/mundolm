@@ -145,7 +145,7 @@ as can be, offers us her excellent service from Mexico. She accompanied us in \
 person for more than four years and now offers us her great service virtually. \
 Yuri is agile, attentive and with a great commitment not only to our clients, \
 but also to Mundo Latino Multiservicios.", "images/team-img-test.png");
-var teamMemberOneEs = new TeamMember("Victor and Yaneth", "Victor y Yaneth, \
+var teamMemberOneEs = new TeamMember("Victor y Yaneth", "Victor y Yaneth, \
 llevaban varios años viviendo en Greer y veían la necesidad de que tenia la \
 comunidad hispana de tener un lugar donde, se les hablara el mismo idioma y \
 donde sus necesidades fueran cubiertas en su totalidad. Motivados por esa gran \
