@@ -268,6 +268,7 @@ app.get("/contact", function(req, res) {
   }
   res.render('contact', {
     method: "get",
+    error: mailError,
     lang: lang,
     title: title,
     nav: nav,
@@ -292,42 +293,25 @@ app.post("/contact", function(req, res) {
 
   var mailOptions = {
     from: process.env.USER_EMAIL,
-    to: 'clientes@mundolm.com',
+    to: 'canasmh@yahoo.com',
     subject: 'Test',
     text: 'test email'
   }
 
+  var mailError = false
+
   transporter.sendMail(mailOptions, function(error, info) {
     if (error) {
       console.log("Error sending email: " + error)
-      res.redirect("/contact", {
-        method: "post",
-        error: true,
-        lang: lang,
-        title: title,
-        nav: nav,
-        contactUs: contactUs,
-        fullName: fullName,
-        email: email,
-        message: message,
-        footer: footer
-      })
+      mailError = true
+
     } else {
       console.log('Email sent: ' + info.response);
-      res.redirect("/contact", {
-        method: "post",
-        error: false,
-        lang: lang,
-        title: title,
-        nav: nav,
-        contactUs: contactUs,
-        fullName: fullName,
-        email: email,
-        message: message,
-        footer: footer
-      })
     }
+
   });
+
+  res.redirect("/contact");
 });
 
 app.get("/es", function(req, res) {
