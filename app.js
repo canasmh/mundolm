@@ -9,7 +9,8 @@ const app = express();
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static("public"));
+// app.use(express.static("public"));
+app.use(express.static(__dirname + "/public"));
 
 class Service {
   constructor(name, description, icon) {
@@ -267,8 +268,6 @@ app.get("/contact", function(req, res) {
     message = messageEs;
   }
   res.render('contact', {
-    method: "get",
-    error: mailError,
     lang: lang,
     title: title,
     nav: nav,
@@ -291,27 +290,51 @@ app.post("/contact", function(req, res) {
     }
   });
 
+  var nameFromForm = req.body.fullName;
+  var emailFromForm = req.body.contactInfo;
+  var messageFromForm = req.body.message;
+
   var mailOptions = {
     from: process.env.USER_EMAIL,
     to: 'canasmh@yahoo.com',
-    subject: 'Test',
-    text: 'test email'
+    subject: 'PREGUNTA DE CLIENTE',
+    text: "PREGUNTA DE: " + nameFromForm + "\n\n" + messageFromForm + "\n\nCONTACT: "
+    + emailFromForm
   }
-
-  var mailError = false
 
   transporter.sendMail(mailOptions, function(error, info) {
     if (error) {
-      console.log("Error sending email: " + error)
-      mailError = true
-
+      res.redirect("/failure")
     } else {
-      console.log('Email sent: ' + info.response);
-    }
+      res.redirect("/success")
+  }
+});
+});
 
+app.get('/success', function(req, res) {
+  res.render('success', {
+    lang: lang,
+    title: title,
+    nav: nav,
+    contactUs: contactUs,
+    fullName: fullName,
+    email: email,
+    message: message,
+    footer: footer
   });
+});
 
-  res.redirect("/contact");
+app.get('/failure', function(req, res) {
+  res.render('failure', {
+    lang: lang,
+    title: title,
+    nav: nav,
+    contactUs: contactUs,
+    fullName: fullName,
+    email: email,
+    message: message,
+    footer: footer
+  });
 });
 
 app.get("/es", function(req, res) {
