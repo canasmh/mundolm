@@ -184,11 +184,13 @@ var teamMembers = teamMembersEn;
 var contactUsEn = ["Have a Question?", "Send Message"];
 var contactUsEs = ["Preguntas?", "Enviar Mensaje"];
 var fullNameEn = new ContactFormEntry("Full Name", "Your Full Name");
-var emailEn = new ContactFormEntry("Email/Phone", "Enter email or phone");
+var emailEn = new ContactFormEntry("Email", "youremail@address.com");
+var phoneEn = new ContactFormEntry("Phone Number", "(123) 456 - 7890");
 var messageEn = new ContactFormEntry("Message", "Write your message here...");
+
 var fullNameEs = new ContactFormEntry("Nombre Completo", "Su nombre completo");
-var emailEs = new ContactFormEntry("Correo Electrónico o Teléfono", "Ingrese \
-correo electrónico o teléfono");
+var emailEs = new ContactFormEntry("Correo Electrónico", "SuCorreo@Electronico.com");
+var phoneEs = new ContactFormEntry("Número de teléfono", "(123) 456 - 7890");
 var messageEs = new ContactFormEntry("Mensaje", "Ingrese su mensaje aquí...");
 
 var successEn = "Your message was sent successfully!"
@@ -203,6 +205,7 @@ var errorMessage = errorEn
 var contactUs = contactUsEn;
 var fullName = fullNameEn;
 var email = emailEn;
+var phone = phoneEn
 var message = messageEn;
 
 // FOOTER
@@ -272,11 +275,13 @@ app.get("/contact", function(req, res) {
     contactUs = contactUsEn;
     fullName = fullNameEn;
     email = emailEn;
+    phone = phoneEn
     message = messageEn;
   } else {
     contactUs = contactUsEs;
     fullName = fullNameEs;
     email = emailEs;
+    phone = phoneEs;
     message = messageEs;
   }
   res.render('contact', {
@@ -286,6 +291,7 @@ app.get("/contact", function(req, res) {
     contactUs: contactUs,
     fullName: fullName,
     email: email,
+    phone: phone,
     message: message,
     footer: footer});
 });
@@ -303,19 +309,21 @@ app.post("/contact", function(req, res) {
   });
 
   var nameFromForm = req.body.fullName;
-  var emailFromForm = req.body.contactInfo;
+  var emailFromForm = req.body.emailAddress;
+  var numberFromForm = req.body.phoneNumber;
   var messageFromForm = req.body.message;
 
   var mailOptions = {
-    from: process.env.USER_EMAIL,
-    to: 'clientes@mundolm.com',
-    subject: 'PREGUNTA DE CLIENTE',
-    text: "PREGUNTA DE: " + nameFromForm + "\n\n" + messageFromForm + "\n\nCONTACT: "
-    + emailFromForm
+    from: emailFromForm,
+    to: 'questions@mundolm.com',
+    subject: 'PREGUNTA DE CLIENTE DESDE MUNDOLM.COM',
+    text: "PREGUNTA DE: " + nameFromForm + "\n\n" + messageFromForm + "\n\nTel: "
+    + numberFromForm + "\nCorreo Electronico: " + emailFromForm
   }
 
   transporter.sendMail(mailOptions, function(error, info) {
     if (error) {
+
       res.redirect("/failure")
     } else {
       res.redirect("/success")
