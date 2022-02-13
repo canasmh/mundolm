@@ -69,15 +69,16 @@ var servicesEs = ["Nuestros Servicios", "Cubrimos sus necesidades de:",
 "... y muchos mas!"];
 var services = servicesEn;
 var serviceOneEn = new Service("Insurance", "Car, Home, Apartments, Workers Comp., \
-General Liability, Commercial Auto", "fa-shield");
+General Liability, Commercial Auto, etc.", "fa-shield");
 var serviceTwoEn = new Service("DMV Transactions", "License Plates, Transfers, \
-Vehicle Registration, Decal Renewal, Automobile, Motorcycle, Trailer, Boat, \
-Jet Ski", "fa-car");
+Vehicle Registration, Decal Renewal, Automobile, Motorcycle, Trailer, DNR transactions: \
+Boat, Jet Ski", "fa-car");
 var serviceThreeEn = new Service("Document Services", "Fax, Copy, E-Mails, \
 Translations, etc.", "fa-copy");
 var serviceFourEn = new Service("Travel Tickets", "Air, Sea and Land",
 "fa-suitcase-rolling");
-var serviceFiveEn = new Service("Public Notary, Marriage Officiant", "",
+var serviceFiveEn = new Service("Public Notary", "Marriage Officiant, Certified \
+Translations, Limited Power of Attorney, etc",
 "fa-stamp");
 var serviceSixEn = new Service("Money Order", "", "fa-money-check");
 var serviceSevenEn = new Service("Wire Transfers", "", "fa-envelope-open-dollar");
@@ -91,15 +92,17 @@ var allServicesEn = [serviceOneEn, serviceTwoEn, serviceThreeEn, serviceFourEn,
   serviceFiveEn, serviceSixEn, serviceEightEn, serviceNineEn, serviceTenEn,
   serviceElevenEn];
 var serviceOneEs = new Service("Seguros", "Auto, Casa, Apartamentos, Workers \
-Comp., General Liability, Auto Comercial ", "fa-shield");
+Comp., General Liability, Auto Comercial, etc.", "fa-shield");
 var serviceTwoEs = new Service("Transacciones del DMV", "Placas, Transferencias, \
-Registro de Auto, Renovación de Sticker, Autos, Motos, Tráiler, Lancha, Jet Ski",
+Registro de Auto, Renovación de Sticker, Autos, Motos, Tráiler, Transacciones del \
+DNR: Lancha, Jet Ski, etc",
 "fa-car");
 var serviceThreeEs = new Service("Servicios de Documentos", "Fax, Copiar, Correo \
 Electrónico, Traducciones, etc.", "fa-copy");
 var serviceFourEs = new Service("Boletos de Viaje", "Aire, Mar y Tierra",
 "fa-suitcase-rolling");
-var serviceFiveEs = new Service("Notario Público, Oficiante de Matrimonios", "",
+var serviceFiveEs = new Service("Notario Público", "Oficiante de Matrimonios, \
+Traducciones, Poder especial, etc.",
 "fa-stamp");
 var serviceSixEs = new Service("Money Order", "", "fa-money-check");
 var serviceSevenEs = new Service("Envíos de dinero", "", "fa-envelope-open-dollar");
@@ -181,11 +184,13 @@ var teamMembers = teamMembersEn;
 var contactUsEn = ["Have a Question?", "Send Message"];
 var contactUsEs = ["Preguntas?", "Enviar Mensaje"];
 var fullNameEn = new ContactFormEntry("Full Name", "Your Full Name");
-var emailEn = new ContactFormEntry("Email/Phone", "Enter email or phone");
+var emailEn = new ContactFormEntry("Email", "youremail@address.com");
+var phoneEn = new ContactFormEntry("Phone Number", "(123) 456 - 7890");
 var messageEn = new ContactFormEntry("Message", "Write your message here...");
+
 var fullNameEs = new ContactFormEntry("Nombre Completo", "Su nombre completo");
-var emailEs = new ContactFormEntry("Correo Electrónico o Teléfono", "Ingrese \
-correo electrónico o teléfono");
+var emailEs = new ContactFormEntry("Correo Electrónico", "SuCorreo@Electronico.com");
+var phoneEs = new ContactFormEntry("Número de teléfono", "(123) 456 - 7890");
 var messageEs = new ContactFormEntry("Mensaje", "Ingrese su mensaje aquí...");
 
 var successEn = "Your message was sent successfully!"
@@ -200,6 +205,7 @@ var errorMessage = errorEn
 var contactUs = contactUsEn;
 var fullName = fullNameEn;
 var email = emailEn;
+var phone = phoneEn
 var message = messageEn;
 
 // FOOTER
@@ -269,11 +275,13 @@ app.get("/contact", function(req, res) {
     contactUs = contactUsEn;
     fullName = fullNameEn;
     email = emailEn;
+    phone = phoneEn
     message = messageEn;
   } else {
     contactUs = contactUsEs;
     fullName = fullNameEs;
     email = emailEs;
+    phone = phoneEs;
     message = messageEs;
   }
   res.render('contact', {
@@ -283,6 +291,7 @@ app.get("/contact", function(req, res) {
     contactUs: contactUs,
     fullName: fullName,
     email: email,
+    phone: phone,
     message: message,
     footer: footer});
 });
@@ -300,19 +309,21 @@ app.post("/contact", function(req, res) {
   });
 
   var nameFromForm = req.body.fullName;
-  var emailFromForm = req.body.contactInfo;
+  var emailFromForm = req.body.emailAddress;
+  var numberFromForm = req.body.phoneNumber;
   var messageFromForm = req.body.message;
 
   var mailOptions = {
-    from: process.env.USER_EMAIL,
-    to: 'clientes@mundolm.com',
-    subject: 'PREGUNTA DE CLIENTE',
-    text: "PREGUNTA DE: " + nameFromForm + "\n\n" + messageFromForm + "\n\nCONTACT: "
-    + emailFromForm
+    from: emailFromForm,
+    to: 'questions@mundolm.com',
+    subject: 'PREGUNTA DE CLIENTE DESDE MUNDOLM.COM',
+    text: "PREGUNTA DE: " + nameFromForm + "\n\n" + messageFromForm + "\n\nTel: "
+    + numberFromForm + "\nCorreo Electronico: " + emailFromForm
   }
 
   transporter.sendMail(mailOptions, function(error, info) {
     if (error) {
+
       res.redirect("/failure")
     } else {
       res.redirect("/success")
