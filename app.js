@@ -69,15 +69,16 @@ var servicesEs = ["Nuestros Servicios", "Cubrimos sus necesidades de:",
 "... y muchos mas!"];
 var services = servicesEn;
 var serviceOneEn = new Service("Insurance", "Car, Home, Apartments, Workers Comp., \
-General Liability, Commercial Auto", "fa-shield");
+General Liability, Commercial Auto, etc.", "fa-shield");
 var serviceTwoEn = new Service("DMV Transactions", "License Plates, Transfers, \
-Vehicle Registration, Decal Renewal, Automobile, Motorcycle, Trailer, Boat, \
-Jet Ski", "fa-car");
+Vehicle Registration, Decal Renewal, Automobile, Motorcycle, Trailer, DNR transactions: \
+Boat, Jet Ski", "fa-car");
 var serviceThreeEn = new Service("Document Services", "Fax, Copy, E-Mails, \
 Translations, etc.", "fa-copy");
 var serviceFourEn = new Service("Travel Tickets", "Air, Sea and Land",
 "fa-suitcase-rolling");
-var serviceFiveEn = new Service("Public Notary, Marriage Officiant", "",
+var serviceFiveEn = new Service("Public Notary", "Marriage Officiant, Certified \
+Translations, Limited Power of Attorney, etc",
 "fa-stamp");
 var serviceSixEn = new Service("Money Order", "", "fa-money-check");
 var serviceSevenEn = new Service("Wire Transfers", "", "fa-envelope-open-dollar");
@@ -91,15 +92,17 @@ var allServicesEn = [serviceOneEn, serviceTwoEn, serviceThreeEn, serviceFourEn,
   serviceFiveEn, serviceSixEn, serviceEightEn, serviceNineEn, serviceTenEn,
   serviceElevenEn];
 var serviceOneEs = new Service("Seguros", "Auto, Casa, Apartamentos, Workers \
-Comp., General Liability, Auto Comercial ", "fa-shield");
+Comp., General Liability, Auto Comercial, etc.", "fa-shield");
 var serviceTwoEs = new Service("Transacciones del DMV", "Placas, Transferencias, \
-Registro de Auto, Renovación de Sticker, Autos, Motos, Tráiler, Lancha, Jet Ski",
+Registro de Auto, Renovación de Sticker, Autos, Motos, Tráiler, Transacciones del \
+DNR: Lancha, Jet Ski, etc",
 "fa-car");
 var serviceThreeEs = new Service("Servicios de Documentos", "Fax, Copiar, Correo \
 Electrónico, Traducciones, etc.", "fa-copy");
 var serviceFourEs = new Service("Boletos de Viaje", "Aire, Mar y Tierra",
 "fa-suitcase-rolling");
-var serviceFiveEs = new Service("Notario Público, Oficiante de Matrimonios", "",
+var serviceFiveEs = new Service("Notario Público", "Oficiante de Matrimonios, \
+Traducciones, Poder especial, etc.",
 "fa-stamp");
 var serviceSixEs = new Service("Money Order", "", "fa-money-check");
 var serviceSevenEs = new Service("Envíos de dinero", "", "fa-envelope-open-dollar");
