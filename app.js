@@ -271,13 +271,26 @@ app.get("/about", function(req, res) {
 
 app.get("/make-payment", function(req, res) {
   const insurancePath = path.join(__dirname, 'public/images/insurance');
+  console.log(insurancePath)
   insuranceSrc = []
+  insuranceUrl = [
+    "https://www.assuranceamerica.com/payment.asp",
+    "https://www.bristolwest.com/payments",
+    "https://my.dairylandinsurance.com/web/login",
+    "https://www.foremoststar.com/nssWeb/pages/login/nssLogin.jsp?fromURI=https\
+    %3A%2F%2Ffarmersinsurance.okta.com%2Fapp%2Ffarmersinsurance_foremoststar_1%2\
+    Fexkbzw6i2rBT2a23n1t7%2Fsso%2Fsaml%3FRelayState%3D",
+    "https://web.mgaebp.com/mgaw/WebPay/BillInfo",
+    "https://customer.nationalgeneral.com/Home/Login/QuickPay",
+    "https://account.apps.progressive.com/access/ez-payment/policy-info"
+  ]
   // console.log(insuranceSrc)
   fs.readdir(insurancePath, function (err, files) {
       //handling error
       if (err) {
           return console.log('Unable to scan directory: ' + err);
       }
+      console.log(files)
       files.forEach(function (file) {
         insuranceSrc.push("images/insurance/" + file)
       });
@@ -285,7 +298,8 @@ app.get("/make-payment", function(req, res) {
         lang: lang,
         title: title,
         nav: nav,
-        insurances: insuranceSrc,
+        insuranceSrc: insuranceSrc,
+        insuranceUrl: insuranceUrl,
         footer: footer});
     });
   });
