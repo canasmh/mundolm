@@ -271,7 +271,6 @@ app.get("/about", function(req, res) {
 
 app.get("/make-payment", function(req, res) {
   const insurancePath = path.join(__dirname, 'public/images/insurance');
-  console.log(insurancePath)
   insuranceSrc = []
   insuranceUrl = [
     "https://www.assuranceamerica.com/payment.asp",
@@ -284,16 +283,17 @@ app.get("/make-payment", function(req, res) {
     "https://customer.nationalgeneral.com/Home/Login/QuickPay",
     "https://account.apps.progressive.com/access/ez-payment/policy-info"
   ]
-  // console.log(insuranceSrc)
+
   fs.readdir(insurancePath, function (err, files) {
       //handling error
       if (err) {
           return console.log('Unable to scan directory: ' + err);
       }
-      console.log(files)
+      
       files.forEach(function (file) {
         insuranceSrc.push("images/insurance/" + file)
       });
+
       res.render('make-payment', {
         lang: lang,
         title: title,
