@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 // app.use(express.static("public"));
 app.use(express.static(__dirname + "/public"));
 
+
 class Service {
   constructor(name, description, icon) {
     this.name = name;
@@ -270,21 +271,25 @@ app.get("/about", function(req, res) {
 
 app.get("/make-payment", function(req, res) {
   const insurancePath = path.join(__dirname, 'public/images/insurance');
-
+  insuranceSrc = []
+  // console.log(insuranceSrc)
   fs.readdir(insurancePath, function (err, files) {
       //handling error
       if (err) {
           return console.log('Unable to scan directory: ' + err);
       }
-        var insuranceSource = files
+      files.forEach(function (file) {
+        insuranceSrc.push("images/insurance/" + file)
+      });
+      res.render('make-payment', {
+        lang: lang,
+        title: title,
+        nav: nav,
+        insurances: insuranceSrc,
+        footer: footer});
+    });
   });
-  res.render('make-payment', {
-    lang: lang,
-    title: title,
-    nav: nav,
-    insurances: insuranceSource,
-    footer: footer});
-});
+
 
 app.get("/contact", function(req, res) {
   if (lang=="en") {

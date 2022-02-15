@@ -1,2 +1,13 @@
 <%- include("header") -%>
+
+<div class="container">
+  <div class="row">
+    <% insurances.forEach(function (file) { %>
+      <div class="col-lg-3 col-md-4 col-sm-12">
+        <img src=<%=file %> alt="">
+      </div>
+    <% }) %>
+  </div>
+</div>
+
 <%- include("footer") -%>
