@@ -32,6 +32,7 @@ h1 {
 h2 {
   font-size: 1.8rem;
   text-align: center;
+  color: #37000A;
 }
 
 h2, h3, h4, h5 {
@@ -516,7 +517,28 @@ ABOUT page
   min-height: 80vh;
 }
 
+/*
 
+
+
+MAKE PAYMENT page
+
+
+
+*/
+
+.make-payment-page {
+  text-align: center;
+  margin: 5rem 3rem;
+}
+
+.insurance-logo {
+  width: 10rem;
+  height: 10rem;
+  margin: 5rem 2.5rem;
+  border: 3px solid #00bef4;
+  border-radius: 15px;
+}
 
 
 /*
@@ -534,6 +556,9 @@ CONTACT page
   padding: 0 3rem;
 }
 
+.contact-header {
+  color: #FFF;
+}
 .question-header {
   text-align: center;
   color: #37000A;

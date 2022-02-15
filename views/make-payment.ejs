@@ -1,10 +1,11 @@
 <%- include("header") -%>
 
-<div class="container">
+<div class="make-payment-page">
+  <h2>Auto Insurance</h2>
   <div class="row">
     <% insurances.forEach(function (file) { %>
       <div class="col-lg-3 col-md-4 col-sm-12">
-        <img src=<%=file %> alt="">
+        <img class="insurance-logo" src=<%=file %> alt="">
       </div>
     <% }) %>
   </div>
