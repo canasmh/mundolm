@@ -1,2 +1,30 @@
 <%- include("header") -%>
+
+<div class="make-payment-page">
+  <h2>Auto Insurance</h2>
+  <div class="row">
+    <% for (i=0; i < insuranceSrc.length; i++) { %>
+      <div class="col-lg-3 col-md-4 col-sm-12">
+        <a href=<%= insuranceUrl[i] %>><img class="insurance-logo" src=<%=insuranceSrc[i] %> alt=""></a>
+      </div>
+    <% } %>
+  </div>
+
+  <h2>Workers Comp</h2>
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-12">
+      <a href="https://www.ncci.com/authentication/forms/ncciform.fcc?version=2.0.0&TYPE=100663297&REALMOID=06-03e60783-9f1d-489d-a4b0-09bb456a38dd&GUID=&SMAUTHREASON=0&METHOD=GET&SMAGENTNAME=-SM-FmCt%2fly%2b%2bTrNpg4GH8WHA39a3TYlpaLOoe0agXH6lvTePwMcGT9CzkRaIbdqowZC&TARGET=-SM-%2foisnet%2fdefault%2easpx">
+        <img class="insurance-logo" src="images/workers-comp/ncci.jpeg" alt="">
+      </a>
+    </div>
+  </div>
+
+  <h2>General Liability</h2>
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-12">
+      <a href="https://secure.gotapco.com/InsuredPaymentPortal"><img class="insurance-logo" src="images/general-liability/tapco.jpeg" alt=""></a>
+    </div>
+  </div>
+</div>
+
 <%- include("footer") -%>

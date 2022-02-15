@@ -1,6 +1,8 @@
 # Files edited with emacs
-
 *~
+
+# Directories in Apple
+.DS_Store
 
 # Logs
 logs

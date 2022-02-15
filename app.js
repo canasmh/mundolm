@@ -4,6 +4,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const nodemailer = require("nodemailer");
+const path = require('path');
+const fs = require('fs');
 
 const app = express();
 
@@ -11,6 +13,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 // app.use(express.static("public"));
 app.use(express.static(__dirname + "/public"));
+
 
 class Service {
   constructor(name, description, icon) {
@@ -267,8 +270,40 @@ app.get("/about", function(req, res) {
 });
 
 app.get("/make-payment", function(req, res) {
-  res.render('make-payment', {lang: lang, title: title, nav: nav, footer: footer});
-});
+  const insurancePath = path.join(__dirname, 'public/images/insurance');
+  console.log(insurancePath)
+  insuranceSrc = []
+  insuranceUrl = [
+    "https://www.assuranceamerica.com/payment.asp",
+    "https://www.bristolwest.com/payments",
+    "https://my.dairylandinsurance.com/web/login",
+    "https://www.foremoststar.com/nssWeb/pages/login/nssLogin.jsp?fromURI=https\
+    %3A%2F%2Ffarmersinsurance.okta.com%2Fapp%2Ffarmersinsurance_foremoststar_1%2\
+    Fexkbzw6i2rBT2a23n1t7%2Fsso%2Fsaml%3FRelayState%3D",
+    "https://web.mgaebp.com/mgaw/WebPay/BillInfo",
+    "https://customer.nationalgeneral.com/Home/Login/QuickPay",
+    "https://account.apps.progressive.com/access/ez-payment/policy-info"
+  ]
+  // console.log(insuranceSrc)
+  fs.readdir(insurancePath, function (err, files) {
+      //handling error
+      if (err) {
+          return console.log('Unable to scan directory: ' + err);
+      }
+      console.log(files)
+      files.forEach(function (file) {
+        insuranceSrc.push("images/insurance/" + file)
+      });
+      res.render('make-payment', {
+        lang: lang,
+        title: title,
+        nav: nav,
+        insuranceSrc: insuranceSrc,
+        insuranceUrl: insuranceUrl,
+        footer: footer});
+    });
+  });
+
 
 app.get("/contact", function(req, res) {
   if (lang=="en") {
