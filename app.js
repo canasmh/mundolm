@@ -183,6 +183,24 @@ var teamMembersEs = [teamMemberOneEs, teamMemberTwoEs, teamMemberThreeEs,
   teamMemberFourEs, teamMemberFiveEs];
 var teamMembers = teamMembersEn;
 
+
+//Make Payment
+
+var paymentHeaderEn = [
+  "Auto Insurance and Commercial Insurance",
+  "Workers Comp.",
+  "General Liability"
+];
+
+var paymentHeaderEs = [
+  "Seguros y Seguros Comerciales",
+  "Workers Comp.",
+  "General Liability"
+];
+
+
+var paymentHeader = paymentHeaderEn;
+
 // CONTACT
 var contactUsEn = ["Have a Question?", "Send Message"];
 var contactUsEs = ["Preguntas?", "Enviar Mensaje"];
@@ -289,15 +307,22 @@ app.get("/make-payment", function(req, res) {
       if (err) {
           return console.log('Unable to scan directory: ' + err);
       }
-      
+
       files.forEach(function (file) {
         insuranceSrc.push("images/insurance/" + file)
       });
+
+      if (lang=="en") {
+        paymentHeader=paymentHeaderEn
+      } else {
+        paymentHeader=paymentHeaderEs
+      }
 
       res.render('make-payment', {
         lang: lang,
         title: title,
         nav: nav,
+        paymentHeaders: paymentHeader,
         insuranceSrc: insuranceSrc,
         insuranceUrl: insuranceUrl,
         footer: footer});
