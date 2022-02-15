@@ -4,6 +4,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const nodemailer = require("nodemailer");
+const path = require('path');
+const fs = require('fs');
 
 const app = express();
 
@@ -267,7 +269,21 @@ app.get("/about", function(req, res) {
 });
 
 app.get("/make-payment", function(req, res) {
-  res.render('make-payment', {lang: lang, title: title, nav: nav, footer: footer});
+  const insurancePath = path.join(__dirname, 'public/images/insurance');
+
+  fs.readdir(insurancePath, function (err, files) {
+      //handling error
+      if (err) {
+          return console.log('Unable to scan directory: ' + err);
+      }
+        var insuranceSource = files
+  });
+  res.render('make-payment', {
+    lang: lang,
+    title: title,
+    nav: nav,
+    insurances: insuranceSource,
+    footer: footer});
 });
 
 app.get("/contact", function(req, res) {
