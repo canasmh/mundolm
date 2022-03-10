@@ -155,7 +155,7 @@ var teamMemberOneEs = new TeamMember("Victor y Yaneth", "Victor y Yaneth, \
 llevaban varios años viviendo en Greer y veían la necesidad de que tenia la \
 comunidad hispana de tener un lugar donde, se les hablara el mismo idioma y \
 donde sus necesidades fueran cubiertas en su totalidad. Motivados por esa gran \
-necesidad, que el día 27 de noviembre, Mundo Latino Multiservicios abrió sus \
+necesidad, que el día de 27 de noviembre, Mundo Latino Multiservicios abrió sus \
 puertas a esa hermosa y valiente comunidad Hispana y a todo aquel, que necesitara \
 de nuestros servicios.", "images/team-img-test.png");
 var teamMemberTwoEs = new TeamMember("Nohemí Riaño", "Nohemí es una joven y \
