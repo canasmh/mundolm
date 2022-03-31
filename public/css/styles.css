@@ -56,6 +56,7 @@ hr {
 }
 
 @media only screen and (max-width: 300px) {
+
   h1 {
     font-size: 1.5rem;
   }
@@ -66,11 +67,12 @@ hr {
 
   p {
     font-size: 0.8rem;
-
   }
+
 }
 
 @media only screen and (min-width: 600px) {
+
   h1 {
     font-size: 3.2rem;
   }
@@ -81,8 +83,8 @@ hr {
 
   p {
     font-size: 1.4rem;
-
   }
+
 }
 
 
@@ -128,11 +130,11 @@ NAVBAR
 
 .lang-link:hover {
   color: #FFF;
-
 }
 
 
 @media only screen and (min-width: 992px) {
+
   .nav-logo {
     height: 3.5rem;
     width: 13rem;
@@ -141,6 +143,7 @@ NAVBAR
   .nav-link {
     margin: auto 0.5rem;
   }
+
 }
 
 /*
@@ -217,9 +220,11 @@ div.welcome-banner h2, hr.welcome-hr {
 }
 
 @media only screen and (min-width: 992px) {
+
   div.welcome-banner h2, hr.welcome-hr {
     display: block;
   }
+
 }
 
 .mlm-header {
@@ -232,7 +237,6 @@ div.welcome-banner h2, hr.welcome-hr {
   width: 80%;
   margin: 0 auto;
   display: inline;
-
 }
 
 .es-btn {
@@ -283,14 +287,16 @@ div.welcome-banner h2, hr.welcome-hr {
 
 
 @media only screen and (min-width: 600px) {
+
   .welcome-banner {
     width: 30rem;
-
     margin: auto 20vw;
   }
+
 }
 
 @media only screen and (min-width: 992px) {
+
   .welcome-banner {
     width: 35rem;
     margin: auto 5rem;
@@ -299,6 +305,7 @@ div.welcome-banner h2, hr.welcome-hr {
   .mlm-header {
     text-shadow: 2px 2px #000;
   }
+
 }
 
 /*
@@ -314,15 +321,19 @@ ABOUT US SECTION
 }
 
 @media only screen and (min-width: 600px) {
+
   .about-section {
     padding: 8rem 4.5rem;
   }
+
 }
 
 @media only screen and (min-width: 992px) {
+
   .about-section {
     padding: 10rem 6rem;
   }
+
 }
 
 .team-img {
@@ -331,7 +342,6 @@ ABOUT US SECTION
   height: 13.5rem;
   border: 2px solid #fff;
   border-radius: 15px;
-
 }
 
 div.about-section p {
@@ -339,15 +349,18 @@ div.about-section p {
 }
 
 @media only screen and (min-width: 600px) {
+
   .team-img {
     margin: 2rem auto 2.5rem;
     width: 25rem;
     height: 20rem;
     border-radius: 15px;
   }
+
 }
 
 @media only screen and (min-width: 992px) {
+
   .team-img {
     float: right;
     height: 22rem;
@@ -357,6 +370,7 @@ div.about-section p {
   div.about-section p {
     text-align: justify;
   }
+
 }
 
 /*
@@ -430,6 +444,7 @@ OUR SERVICES SECTION
 }
 
 @media only screen and (min-width: 992px) {
+
   .service-section {
     padding: 15vh 10vw 10vh;
   }
@@ -498,7 +513,6 @@ div.contact-section .section-header {
 
 .phone-link:hover, .soc-icon:hover {
   color: #00bef4;
-
 }
 
 .contact-hr {
@@ -507,10 +521,13 @@ div.contact-section .section-header {
   border: 1px solid #FFF;
   margin: 2rem auto;
 }
+
 @media only screen and (min-width: 600px) {
+
   div.contact-section p {
     font-size: 1rem;
   }
+
 }
 
 /*
