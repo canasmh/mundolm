@@ -332,9 +332,11 @@ ABOUT US SECTION
 
 .team-img {
   margin: 1rem auto 3rem;
-  width: 12rem;
-  height: 12rem;
-  border-radius: 100%;
+  width: 15rem;
+  height: 13.5rem;
+  border: 2px solid #fff;
+  border-radius: 15px;
+
 }
 
 div.about-section p {
@@ -343,8 +345,8 @@ div.about-section p {
 
 @media only screen and (min-width: 600px) {
   .team-img {
-    margin: 2rem auto 1rem;
-    width: 20rem;
+    margin: 2rem auto 2.5rem;
+    width: 25rem;
     height: 20rem;
     border-radius: 15px;
   }
@@ -353,7 +355,9 @@ div.about-section p {
 @media only screen and (min-width: 992px) {
   .team-img {
     float: right;
-    margin: 2rem 2.5rem ;
+    height: 22rem;
+    width: 27.5rem;
+    margin-left: 8rem;
   }
   div.about-section p {
     text-align: justify;
@@ -399,8 +403,8 @@ OUR SERVICES SECTION
 
 .team-member img {
   border-radius: 100%;
-  height: 8.5rem;
-  width: 8.5rem;
+  height: 12rem;
+  width: 12rem;
   margin: 2.5rem auto;
 }
 
@@ -408,9 +412,50 @@ OUR SERVICES SECTION
   font-size: 1rem;
 }
 
+@media only screen and (min-width: 600px) {
+
+  .team-member img {
+    height: 13.5rem;
+    width: 13,5rem;
+  }
+
+  .team-page p {
+    padding: 1rem 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .v-y p {
+    padding: 1.5rem 8rem 4rem;
+  }
+
+  .v-y img {
+    height: 15rem;
+    width: 15rem;
+  }
+
+}
+
 @media only screen and (min-width: 992px) {
   .service-section {
     padding: 15vh 10vw 10vh;
+  }
+
+  .team-member img {
+    height: 15rem;
+    width: 15rem;
+  }
+
+  .team-page p {
+    padding: 1rem 3rem;
+  }
+
+  .v-y p {
+    padding: 1.5rem 15rem 4rem;
+  }
+
+  .v-y img {
+    height: 18rem;
+    width: 18rem;
   }
 
 }
@@ -485,7 +530,7 @@ ABOUT page
 */
 
 .about-page {
-  background-image: url("../images/team-pic2.png");
+  background-image: url("../images/group-pic2.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
