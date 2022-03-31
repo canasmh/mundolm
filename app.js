@@ -39,7 +39,7 @@ class ContactFormEntry {
 }
 
 // Header
-var lang = "es";
+var lang = "en";
 var titleEn = "Welcome | MLM";
 var titleEs = "Bienvenidos | MLM";
 
@@ -131,21 +131,21 @@ been living in Greer for several years and saw the need for the Hispanic \
 community to have a place where the same language was spoken to them and where \
 their needs were fully met. Motivated by this great need, on November 27, Mundo \
 Latino Multiservicios opened its doors to that beautiful and brave Hispanic \
-community and to anyone who needed our services.", "images/team-img-test.png");
+community and to anyone who needed our services.", "images/v-y.png");
 var teamMemberTwoEn = new TeamMember("Nohemí Riaño", "Nohemí is a young and \
 charismatic woman, originally from Mexico, with more than five years of \
 experience and knowledge of our products. This makes her have an excellent \
 attention to our clients and an agile development in her service.",
-"images/team-img-test.png");
+"images/nohemi.png");
 var teamMemberThreeEn = new TeamMember("Andres Felipe Gonzalez", "A young \
 Colombian, who has accompanied us on this walk for more than four years. Andres \
 has a great knowledge, performance and development in systems, and can be trusted \
 to respond with great mastery and speed in the service of our excellent products.",
-"images/team-img-test.png");
+"images/andres.png");
 var teamMemberFourEn = new TeamMember("Norma Cinto", "A tender and simple \
 Guatemalan woman with more than three years she has delivered an excellent \
 service, of providing ours in a simple, honest and loving way.",
-"images/team-img-test.png");
+"images/norma.png");
 var teamMemberFiveEn = new TeamMember("Yuridia Hernandez", "Yuri as affectionate \
 as can be, offers us her excellent service from Mexico. She accompanied us in \
 person for more than four years and now offers us her great service virtually. \
@@ -157,20 +157,20 @@ comunidad hispana de tener un lugar donde, se les hablara el mismo idioma y \
 donde sus necesidades fueran cubiertas en su totalidad. Motivados por esa gran \
 necesidad, que el día de 27 de noviembre, Mundo Latino Multiservicios abrió sus \
 puertas a esa hermosa y valiente comunidad Hispana y a todo aquel, que necesitara \
-de nuestros servicios.", "images/team-img-test.png");
+de nuestros servicios.", "images/v-y.png");
 var teamMemberTwoEs = new TeamMember("Nohemí Riaño", "Nohemí es una joven y \
 carismática mujer, oriunda de México, con mas de cinco años de experiencia y \
 conocimiento de nuestros productos. Esto hace que tenga una excelente atención a \
 nuestro cliente y un ágil desenvolvimiento en sus servicio.",
-"images/team-img-test.png");
+"images/nohemi.png");
 var teamMemberThreeEs = new TeamMember("Andres Felipe Gonzalez", "Joven \
 Colombiano, que nos acompaña en este caminar por mas de cuatro años. Andres \
 tiene un gran conocimiento, desempeño y desenvolvimiento en sistemas, punto a \
 favor, para agilizar y responder con gran maestría en el servicio de nuestros \
-excelentes productos.", "images/team-img-test.png");
+excelentes productos.", "images/andres.png");
 var teamMemberFourEs = new TeamMember("Norma Cinto", "Una tierna y sencilla mujer \
 Guatemalteca con mas de tres años acompañados a entregar su excelente servicio, \
-a nuestros de una manera simple, honesta y amorosa.", "images/team-img-test.png");
+a nuestros de una manera simple, honesta y amorosa.", "images/norma.png");
 var teamMemberFiveEs = new TeamMember("Yuridia Hernandez", "Yuri como \
 cariñosamente, le dimos nosotros y nuestros clientes, nos ofrece su excelente \
 servicio desde México. Nos acompaño presencialmente por mas de cuatro años y \
