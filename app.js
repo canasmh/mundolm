@@ -6,7 +6,7 @@ const ejs = require("ejs");
 const nodemailer = require("nodemailer");
 const path = require('path');
 const fs = require('fs');
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 
@@ -245,8 +245,11 @@ if (lang=="en") {
   var footer = footerEs;
 }
 
+var currentPage = "home";
 
 app.get("/", function(req, res) {
+
+  currentPage = "home";
 
   if (lang == "en") {
     welcome = welcomeEn;
@@ -273,6 +276,9 @@ app.get("/", function(req, res) {
 });
 
 app.get("/about", function(req, res) {
+
+  currentPage = "about";
+
   if (lang=="en") {
     ourTeam = ourTeamEn;
     teamMembers = teamMembersEn;
@@ -290,6 +296,8 @@ app.get("/about", function(req, res) {
 });
 
 app.get("/make-payment", function(req, res) {
+  currentPage = "payment";
+
   const insurancePath = path.join(__dirname, 'public/images/insurance');
   insuranceSrc = []
   insuranceUrl = [
@@ -333,6 +341,7 @@ app.get("/make-payment", function(req, res) {
 
 
 app.get("/contact", function(req, res) {
+  currentPage = "contact";
   if (lang=="en") {
     contactUs = contactUsEn;
     fullName = fullNameEn;
@@ -444,7 +453,28 @@ app.get("/es", function(req, res) {
     footer=footerEn;
   }
 
-  res.redirect("/");
+  if (currentPage === "home") {
+    res.redirect("/");
+  }
+
+  else if (currentPage === "about") {
+    res.redirect("/about");
+  }
+
+  else if (currentPage === "payment") {
+    res.redirect("/make-payment");
+
+  }
+
+  else if (currentPage === "contact") {
+    res.redirect("/contact");
+
+  }
+
+  else {
+    res.redirect("/")
+  }
+
 });
 
 
