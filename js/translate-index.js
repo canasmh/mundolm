@@ -145,12 +145,10 @@ var navLinks = $('a.nav-link')
 var dropDownItems = $('a.dropdown-item')
 
 for (let i=0; i < navLinks.length; i++) {
-  console.log(navLinks[i].textContent)
   navLinks[i].textContent = nav[i]
 }
 
 for (let i=0; i < dropDownItems.length; i++) {
-  console.log(dropDownItems[i].textContent)
   dropDownItems[i].textContent = dropDown[i]
 }
 
@@ -178,7 +176,6 @@ for (i=0; i < allServices.length; i++) {
   serviceInnerHTML += '</h6></div>';
 }
 serviceInnerHTML += '<p class="many-more">' + services[2] + '</p>'
-console.log(serviceInnerHTML);
 serviceRow.innerHTML = serviceInnerHTML
 
 $('div.contact-section h2')[0].textContent = footer[0]
