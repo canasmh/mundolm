@@ -1,0 +1,680 @@
+/* Colors */
+/* #00bef4 sky-blue in logo*/
+/* #3A429A dark-blue in logo*/
+/* #F7212C red in logo  */
+/* #37000A dark magenta */
+/* #D1BCE3 light-purple*/
+/* #0098c2 pink olive*/
+
+/* Fonts */
+/* font-family: 'Barlow Condensed', sans-serif; */
+/* font-family: 'Outfit', sans-serif; */
+/* font-family: 'Source Serif Pro', serif; */
+/* font-family: 'Tangerine', cursive; */
+/* font-family: 'Montserrat', sans-serif; */
+
+html {
+  -webkit-appearance: none;
+}
+
+body {
+  line-height: 2;
+  letter-spacing: 3px;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #37000A;
+}
+
+h2, h3, h4, h5 {
+  font-family: 'Source Serif Pro', serif;
+}
+
+h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+
+
+hr {
+  width: 67%;
+  margin: 1.2rem auto;
+  color: #3A429A;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media only screen and (max-width: 300px) {
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+}
+
+@media only screen and (min-width: 600px) {
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+}
+
+
+/*
+NAVBAR
+*/
+.nav-logo {
+  height: 3rem;
+  width: 9rem;
+}
+
+.dropdown-item, .nav-link {
+  font-size: 1.2rem;
+  color: #3A429A;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.dropdown-item:hover, .nav-link:hover {
+  color: #00bef4;
+  background: none;
+}
+
+.fal {
+  font-size: 2rem;
+  color: #3A429A;
+}
+
+.dropdown-divider {
+  width: 100%;
+}
+
+.lang-nav {
+  background-color: rgba(58, 66, 154, 0.8)
+}
+
+.lang-link {
+  color: #FFF;
+}
+
+.lang-nav:hover {
+  background-color: rgba(58, 66, 154, 1)
+}
+
+.lang-link:hover {
+  color: #FFF;
+}
+
+
+@media only screen and (min-width: 992px) {
+
+  .nav-logo {
+    height: 3.5rem;
+    width: 13rem;
+  }
+
+  .nav-link {
+    margin: auto 0.5rem;
+  }
+
+}
+
+/*
+
+
+SECTIONS
+
+
+*/
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/*
+Welcome Section
+*/
+
+
+
+.welcome-section {
+  min-height: 80vh;
+  display: flex;
+  background-image: url("../images/phone-call.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  color: white;
+  margin-bottom: 2vh;
+  position: relative;
+  right: 100vw;
+  opacity: 0
+}
+
+.welcome-banner {
+  opacity: 0;
+  margin: auto 10vw;
+  width: 80vw;
+  background-color: rgba(0, 190, 244, 0.9);
+  border: 1px solid #3A429A;
+  border-radius: 15%;
+  text-align: center;
+  min-height: 40vh;
+  padding-top: 3rem;
+  padding-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  position: relative;
+  top: 100vh;
+}
+
+.welcome {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 7px;
+  color: #FFFFFF;
+}
+
+.motto {
+  opacity: 0;
+  font-family: 'Caveat', cursive;
+  font-weight: 300;
+  font-size: 2rem;
+  color: #FFF;;
+  letter-spacing: 7px;
+}
+
+div.welcome-banner h2, hr.welcome-hr {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+
+  div.welcome-banner h2, hr.welcome-hr {
+    display: block;
+  }
+
+}
+
+.mlm-header {
+  color: #3A429A;
+  text-shadow: 3px 1px #000;
+  font-family: 'Outfit', sans-serif;
+}
+
+.welcome-buttons {
+  width: 80%;
+  margin: 0 auto;
+  display: inline;
+}
+
+.es-btn {
+  border-radius: 10px;
+  background-color: inherit;
+  border: 1px solid #FFF;
+  color: #FFF;
+  margin: 0.5rem 0.3rem;
+  width: 60%;
+  padding: 0.5rem;
+}
+
+.quote-btn {
+  border-radius: 10px;
+  background-color: #3A429A;
+  border: 1px solid #3A429A;
+  color: #FFF;
+  margin: 0.5rem 0.3rem;
+  width: 60%;
+  padding: 0.5rem;
+}
+
+.es-btn:hover, .quote-btn:hover  {
+  border: 1px solid #3A429A;
+  background-color: #FFF;
+  color: #3A429A;
+}
+
+.scroll-down-div {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  opacity: 0;
+  top: 100vh;
+}
+
+.scroll-down-arrow {
+  color: #00bef4;
+  font-size: 2.5rem;
+}
+
+.scroll-down-arrow:hover {
+  color: #3A429A;
+  font-size: 2.7rem;
+  cursor: pointer;
+}
+
+
+@media only screen and (min-width: 600px) {
+
+  .welcome-banner {
+    width: 30rem;
+    margin: auto 20vw;
+  }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+  .welcome-banner {
+    width: 35rem;
+    margin: auto 5rem;
+  }
+
+  .mlm-header {
+    text-shadow: 2px 2px #000;
+  }
+
+}
+
+/*
+ABOUT US SECTION
+*/
+
+.about-section {
+  color: #37000A;
+  padding: 6rem 1.5rem;
+  background: rgba(0, 152, 194, 0.1);
+  min-height: 85vh;
+  text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+
+  .about-section {
+    padding: 8rem 4.5rem;
+  }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+  .about-section {
+    padding: 10rem 6rem;
+  }
+
+}
+
+.team-img {
+  margin: 1rem auto 3rem;
+  width: 15rem;
+  height: 13.5rem;
+  border: 2px solid #fff;
+  border-radius: 15px;
+}
+
+div.about-section p {
+  text-align: left;
+}
+
+@media only screen and (min-width: 600px) {
+
+  .team-img {
+    margin: 2rem auto 2.5rem;
+    width: 25rem;
+    height: 20rem;
+    border-radius: 15px;
+  }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+  .team-img {
+    float: right;
+    height: 22rem;
+    width: 27.5rem;
+    margin-left: 8rem;
+  }
+  div.about-section p {
+    text-align: justify;
+  }
+
+}
+
+/*
+OUR SERVICES SECTION
+*/
+
+.service-section{
+  color: #37000A;
+  padding: 15vh 5vw 10vh;
+  min-height: 75vh;
+}
+
+.service-row {
+  text-align: center;
+}
+
+.service-col {
+}
+
+
+
+.service-icon {
+  font-size: 4rem;
+  margin: 3.5rem auto 1.2rem;
+}
+
+.many-more {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.team-page {
+  color: #37000A;
+  padding: 15vh 5vw 10vh;
+  min-height: 75vh;
+  text-align: center;
+}
+
+.team-page p {
+  text-align: left;
+  padding: 1.5rem 1rem;
+}
+
+.team-member img {
+  border-radius: 100%;
+  height: 12rem;
+  width: 12rem;
+  margin: 2.5rem auto;
+}
+
+.team-member p {
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 600px) {
+
+  .team-member img {
+    height: 13.5rem;
+    width: 13.5rem;
+  }
+
+  .team-page p {
+    padding: 1rem 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .v-y p {
+    padding: 1.5rem 8rem 4rem;
+  }
+
+  .v-y img {
+    height: 15rem;
+    width: 15rem;
+  }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+  .service-section {
+    padding: 15vh 10vw 10vh;
+  }
+
+  .service-col {
+    padding: 2.5rem 2rem;
+  }
+
+  .team-member img {
+    height: 15rem;
+    width: 15rem;
+  }
+
+  .team-page p {
+    padding: 1rem 3rem;
+  }
+
+  .v-y p {
+    padding: 1.5rem 15rem 4rem;
+  }
+
+  .v-y img {
+    height: 18rem;
+    width: 18rem;
+  }
+
+}
+
+/*
+CONTACT SECTION
+*/
+
+.hide {
+  visibility: hidden;
+}
+
+.contact-section {
+  color: #fff;
+  padding: 10vh 2.5rem 5vh;
+  background: rgba(58, 66, 154, 0.8);
+}
+
+.contact-section h3 {
+  text-align: left;
+}
+
+div.contact-section p {
+  font-size: 0.8rem;
+}
+
+div.contact-section .section-header {
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+}
+
+.soc-icon-container {
+  text-align: center;
+}
+
+.phone-link {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.soc-icon {
+  font-size: 1.5rem;
+  margin: 1rem 1rem 2rem;
+  color: #FFF;
+}
+
+.phone-link:hover, .soc-icon:hover {
+  color: #00bef4;
+}
+
+.contact-hr {
+  width: 30%;
+  color: #FFF;
+  border: 1px solid #FFF;
+  margin: 2rem auto;
+}
+
+@media only screen and (min-width: 600px) {
+
+  div.contact-section p {
+    font-size: 1rem;
+  }
+
+}
+
+/*
+
+
+
+ABOUT page
+
+
+
+*/
+
+.about-page {
+  background-image: url("../images/group-pic2.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+}
+
+.team-btn-div {
+  margin: auto;
+}
+
+.btn-team {
+  border: 2px solid #FFF;
+  background-color: none;
+  border-radius: 15px;
+  color: #FFF;
+  font-size: 1.8rem;
+  font-weight: 200;
+  padding: 0.5rem 3rem;
+  -webkit-appearance: none;
+}
+
+.btn-team:hover {
+  border: 2px solid #C3C3C3;
+  color: #E1E1E1;
+}
+
+.team-page {
+  min-height: 80vh;
+}
+
+/*
+
+
+
+MAKE PAYMENT page
+
+
+
+*/
+
+.make-payment-page {
+  text-align: center;
+  margin: 5rem 3rem;
+}
+
+.insurance-logo {
+  width: 10rem;
+  height: 10rem;
+  margin: 5rem 2.5rem;
+  border: 2px solid #00bef4;
+  border-radius: 30px;
+}
+
+.insurance-logo:hover {
+  border: 4px solid #3A429A;
+}
+
+
+/*
+
+
+
+CONTACT page
+
+
+
+*/
+
+.contact-page {
+  margin: 5rem auto 5rem;
+  padding: 0 3rem;
+}
+
+.contact-header {
+  color: #FFF;
+}
+.question-header {
+  text-align: center;
+  color: #37000A;
+  margin-bottom: 2.5rem;
+}
+
+.form-group {
+  margin: 0.5rem auto 0.7rem;
+}
+
+.submit-btn {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #FFF;
+  border-radius: 5px;
+  background: rgba(58, 66, 154, 1);
+}
+
+.submit-btn:hover {
+  color: #FFF;
+  border: 1px solid #3A429A;
+  background-color: rgba(58, 66, 154, 0.8);
+
+}
+
+/*
+FOOTER
+*/
+
+@media only screen and (min-width: 992px) {
+  .branch-info {
+    padding-left: 12rem;
+  }
+
+}
+
+
+footer {
+  text-align: center;
+  margin: 1.2rem 0;
+}
+
+footer p {
+  font-size: 1rem;
+}
