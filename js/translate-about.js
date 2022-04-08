@@ -104,6 +104,8 @@ function changeLanguage() {
   console.log(localStorage.getItem("lang"))
 }
 
+$('.lang-link').click(changeLanguage);
+
 if (localStorage.getItem("lang") == "en") {
   document.documentElement.setAttribute("lang", "en");
   title = titleEn;
@@ -124,4 +126,4 @@ if (localStorage.getItem("lang") == "en") {
   console.log("Need to catch this")
 }
 
-$('.lang-link').click(changeLanguage);
+document.title = title;
