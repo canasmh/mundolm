@@ -90,3 +90,39 @@ var teamMembers;
 var footerEn = ["Contact Us", "Mon-Sat", "Sun"];
 var footerEs = ["Contáctanos", "Lun-Sáb", "Dom"];
 var footer;
+
+function changeLanguage() {
+  if (localStorage.getItem("lang") == "en") {
+    localStorage.setItem("lang", "es");
+
+  } else if (localStorage.getItem("lang") == "es") {
+    localStorage.setItem("lang", "en");
+
+  } else {
+    console.log("Need to catch this");
+  }
+  console.log(localStorage.getItem("lang"))
+}
+
+if (localStorage.getItem("lang") == "en") {
+  document.documentElement.setAttribute("lang", "en");
+  title = titleEn;
+  nav = navEn;
+  dropDown = dropDownEn;
+  ourTeam = ourTeamEn;
+  teamMembers = teamMembersEn;
+  footer = footerEn;
+} else if (localStorage.getItem("lang") == "es") {
+  document.documentElement.setAttribute("lang", "es");
+  title = titleEs;
+  nav = navEs;
+  dropDown = dropDownEs;
+  ourTeam = ourTeamEs;
+  teamMembers = teamMembersEs;
+  footer = footerEs;
+} else {
+  console.log("Need to catch this")
+}
+
+$('.lang-link').click(changeLanguage);
+$('.es-btn').click(changeLanguage);
