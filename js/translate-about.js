@@ -123,7 +123,33 @@ if (localStorage.getItem("lang") == "en") {
   teamMembers = teamMembersEs;
   footer = footerEs;
 } else {
-  console.log("Need to catch this")
+  console.log("Need to catch this");
 }
 
 document.title = title;
+$('title').textContent = title;
+var navLinks = $('a.nav-link');
+var dropDownItems = $('a.dropdown-item');
+
+for (let i=0; i < navLinks.length; i++) {
+  navLinks[i].textContent = nav[i];
+}
+
+for (let i=0; i < dropDownItems.length; i++) {
+  dropDownItems[i].textContent = dropDown[i];
+}
+
+$('a.btn-team')[0].textContent = ourTeam;
+$('div.team-page h2')[0].textContent = ourTeam;
+
+for (var i=0; i < teamMembers.length; i++) {
+  $('div.team-member h4')[i].textContent = teamMembers[i].name;
+  $('div.team-member p')[i].textContent = teamMembers[i].description;
+}
+
+$('div.contact-section h2')[0].textContent = footer[0];
+$('p.schedule span')[0].textContent = footer[1];
+$('p.schedule span')[1].textContent = footer[2];
+
+$('p.schedule span')[2].textContent = footer[1];
+$('p.schedule span')[3].textContent = footer[2];
