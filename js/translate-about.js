@@ -125,4 +125,3 @@ if (localStorage.getItem("lang") == "en") {
 }
 
 $('.lang-link').click(changeLanguage);
-$('.es-btn').click(changeLanguage);
