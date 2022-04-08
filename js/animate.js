@@ -32,3 +32,9 @@ $('.team-btn-div').click(function() {
   let teamPage = document.getElementsByClassName("team-page")[0];
   teamPage.scrollIntoView({behavior: "smooth"});
 });
+
+$('.scroll-down-arrow').click(function() {
+  let aboutUs = document.getElementsByClassName("about-section")[0];
+  aboutUs.scrollIntoView({behavior: "smooth"});
+
+});
