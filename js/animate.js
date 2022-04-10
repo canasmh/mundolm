@@ -37,9 +37,9 @@ $('.scroll-down-arrow').click(function() {
   let aboutUs = document.getElementsByClassName("about-section")[0];
   aboutUs.scrollIntoView({behavior: "smooth"});
 });
-// margin: 5rem 2.5rem;
+
 $('.insurance-logo').hover(function () {
-  $( this ).animate({height: '13.5rem', width: '13.5rem', margin: '4.5rem 2.5rem'}, 200);
+  $( this ).animate({height: '13.5rem', width: '13.5rem', margin: '4.5rem 2.5rem'}, 300);
 }, function() {
-  $( this ).animate({height: '12.5rem', width: '12.5rem', margin: '5rem 2.5rem'}, 200);
+  $( this ).animate({height: '12.5rem', width: '12.5rem', margin: '5rem 2.5rem'}, 300);
 });
