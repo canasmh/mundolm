@@ -218,18 +218,28 @@ Welcome Section
   font-size: 2rem;
   color: #FFF;;
   letter-spacing: 7px;
+  display: none;
+}
+
+.ellipses {
+  display: none;
 }
 
 div.welcome-banner h2, hr.welcome-hr {
   display: none;
 }
 
+@media only screen and (min-width: 600px) {
+  .motto, .ellipses {
+    display: inline;
+  }
+}
+
 @media only screen and (min-width: 992px) {
 
-  div.welcome-banner h2, hr.welcome-hr {
+  div.welcome-banner h2, hr.welcome-hr{
     display: block;
   }
-
 }
 
 .mlm-header {
@@ -311,6 +321,10 @@ div.welcome-banner h2, hr.welcome-hr {
     text-shadow: 2px 2px #000;
   }
 
+  .welcome-section {
+    background-position: top;
+  }
+
 }
 
 /*
@@ -344,7 +358,7 @@ ABOUT US SECTION
 .team-img {
   margin: 1rem auto 3rem;
   width: 15rem;
-  height: 13.5rem;
+  height: 15rem;
   border: 2px solid #fff;
   border-radius: 15px;
 }
@@ -358,7 +372,7 @@ div.about-section p {
   .team-img {
     margin: 2rem auto 2.5rem;
     width: 25rem;
-    height: 20rem;
+    height: 25rem;
     border-radius: 15px;
   }
 
@@ -368,8 +382,8 @@ div.about-section p {
 
   .team-img {
     float: right;
-    height: 22rem;
-    width: 27.5rem;
+    /* height: 20rem;
+    width: 30rem; */
     margin-left: 8rem;
   }
   div.about-section p {
@@ -424,6 +438,7 @@ OUR SERVICES SECTION
   height: 12rem;
   width: 12rem;
   margin: 2.5rem auto;
+  border: 1px solid #3A429A;
 }
 
 .team-member p {
