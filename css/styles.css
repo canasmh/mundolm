@@ -359,8 +359,8 @@ ABOUT US SECTION
   margin: 1rem auto 3rem;
   width: 15rem;
   height: 15rem;
-  border: 2px solid #fff;
-  border-radius: 15px;
+  border: 3px solid #3A429A;
+  border-radius: 100%;
 }
 
 div.about-section p {
@@ -373,7 +373,6 @@ div.about-section p {
     margin: 2rem auto 2.5rem;
     width: 25rem;
     height: 25rem;
-    border-radius: 15px;
   }
 
 }
@@ -382,8 +381,6 @@ div.about-section p {
 
   .team-img {
     float: right;
-    /* height: 20rem;
-    width: 30rem; */
     margin-left: 8rem;
   }
   div.about-section p {
@@ -438,7 +435,7 @@ OUR SERVICES SECTION
   height: 12rem;
   width: 12rem;
   margin: 2.5rem auto;
-  border: 1px solid #3A429A;
+  border: 2px solid #3A429A;
 }
 
 .team-member p {
@@ -535,8 +532,8 @@ div.contact-section .section-header {
 }
 
 .soc-icon {
-  font-size: 1.5rem;
-  margin: 1rem 1rem 2rem;
+  font-size: 1.8rem;
+  margin: 1.5rem 1.5rem 2rem;
   color: #FFF;
 }
 
