@@ -47,9 +47,9 @@ var serviceThreeEn = new Service("Document Services", "Fax, Copy, E-Mails, \
 Translations, etc.", "fa-copy");
 var serviceFourEn = new Service("Travel Tickets", "Air, Sea and Land",
 "fa-suitcase-rolling");
-var serviceFiveEn = new Service("Taxes", "File your taxes with us. Create a new business", "fa-sack-dollar")
+var serviceFiveEn = new Service("Taxes", "Tax filing, Tax ID/EIN Creation, Business Creation and Business Advisment", "fa-sack-dollar")
 var serviceSixEn = new Service("Public Notary", "Marriage Officiant, Certified \
-Translations, Limited Power of Attorney, etc",
+Translations, Limited Power of Attorney, Preparation of Contracts, etc",
 "fa-stamp");
 var serviceSevenEn = new Service("Money Order", "", "fa-money-check");
 var serviceEightEn = new Service("Wire Transfers", "", "fa-envelope-open-dollar");
@@ -70,9 +70,9 @@ var serviceThreeEs = new Service("Servicios de Documentos", "Fax, Fotocopias, Co
 Electrónico, Traducciones, etc.", "fa-copy");
 var serviceFourEs = new Service("Boletos de Viaje", "Aire, Mar y Tierra",
 "fa-suitcase-rolling");
-var serviceFiveEs = new Service("Taxes", "Haz tus taxes con nosotros. Crea una nueva compania.", "fa-sack-dollar")
+var serviceFiveEs = new Service("Taxes", "Declaración de Impuestos, Creación de TaxID e EIN, Creación de empresa, Asesorías Comerciales", "fa-sack-dollar")
 var serviceSixEs = new Service("Notario Público", "Oficiante de Matrimonios, \
-Traducciones, Poderes, etc.",
+Traducciones, Poderes, Elaboración de Contratos, etc.",
 "fa-stamp");
 var serviceSevenEs = new Service("Money Order", "", "fa-money-check");
 var serviceEightEs = new Service("Envíos de dinero", "", "fa-envelope-open-dollar");
