@@ -11,8 +11,8 @@ $(document).ready(function() {
 });
 
 setTimeout(function() {
-  $('.welcome-banner').animate({opacity: 1, top: '0'}, 700);
-  $('.scroll-down-div').animate({opacity: 1, top: '0'}, 700)
+  $('.welcome-banner').animate({opacity: 1, top: '0'}, 1100);
+  $('.scroll-down-div').animate({opacity: 1, top: '0'}, 1100)
 }, 900);
 
 setTimeout(function() {
