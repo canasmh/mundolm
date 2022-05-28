@@ -181,14 +181,14 @@ Welcome Section
   margin-bottom: 2vh;
   position: relative;
   right: 100vw;
-  opacity: 0
+  opacity: 0;
 }
 
 .welcome-banner {
   opacity: 0;
   margin: auto 10vw;
   width: 80vw;
-  background-color: rgba(0, 190, 244, 0.9);
+  background-color: rgba(0, 190, 244, 0.8);
   border: 1px solid #3A429A;
   border-radius: 15%;
   text-align: center;
