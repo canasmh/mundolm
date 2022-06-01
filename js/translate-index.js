@@ -47,16 +47,17 @@ var serviceThreeEn = new Service("Document Services", "Fax, Copy, E-Mails, \
 Translations, etc.", "fa-copy");
 var serviceFourEn = new Service("Travel Tickets", "Air, Sea and Land",
 "fa-suitcase-rolling");
-var serviceFiveEn = new Service("Public Notary", "Marriage Officiant, Certified \
-Translations, Limited Power of Attorney, etc",
+var serviceFiveEn = new Service("Taxes", "Tax filing, Tax ID/EIN Creation, Business Creation and Business Advisment", "fa-sack-dollar")
+var serviceSixEn = new Service("Public Notary", "Marriage Officiant, Certified \
+Translations, Limited Power of Attorney, Preparation of Contracts, etc",
 "fa-stamp");
-var serviceSixEn = new Service("Money Order", "", "fa-money-check");
-var serviceSevenEn = new Service("Wire Transfers", "", "fa-envelope-open-dollar");
-var serviceEightEn = new Service("Bill Payments", "", "fa-file-invoice-dollar");
-var serviceNineEn = new Service("Cash Checks", "", "fa-money-check-edit-alt");
-var serviceTenEn = new Service("Shipping to Central & South America", "",
+var serviceSevenEn = new Service("Money Order", "", "fa-money-check");
+var serviceEightEn = new Service("Wire Transfers", "", "fa-envelope-open-dollar");
+var serviceNineEn = new Service("Bill Payments", "", "fa-file-invoice-dollar");
+var serviceTenEn = new Service("Cash Checks", "", "fa-money-check-edit-alt");
+var serviceElevenEn = new Service("Shipping to Central & South America", "",
 "fa-box-open");
-var serviceElevenEn = new Service("Buy, Activate, or Recharge Cell Phone", "",
+var serviceTwelveEn = new Service("Buy, Activate, or Recharge Cell Phone", "",
 "fa-mobile");
 
 var serviceOneEs = new Service("Seguros", "Auto, Casa, Apartamentos, Workers \
@@ -69,25 +70,26 @@ var serviceThreeEs = new Service("Servicios de Documentos", "Fax, Fotocopias, Co
 Electrónico, Traducciones, etc.", "fa-copy");
 var serviceFourEs = new Service("Boletos de Viaje", "Aire, Mar y Tierra",
 "fa-suitcase-rolling");
-var serviceFiveEs = new Service("Notario Público", "Oficiante de Matrimonios, \
-Traducciones, Poderes, etc.",
+var serviceFiveEs = new Service("Taxes", "Declaración de Impuestos, Creación de TaxID e EIN, Creación de empresa, Asesorías Comerciales", "fa-sack-dollar")
+var serviceSixEs = new Service("Notario Público", "Oficiante de Matrimonios, \
+Traducciones, Poderes, Elaboración de Contratos, etc.",
 "fa-stamp");
-var serviceSixEs = new Service("Money Order", "", "fa-money-check");
-var serviceSevenEs = new Service("Envíos de dinero", "", "fa-envelope-open-dollar");
-var serviceEightEs = new Service("Pagos de Biles", "Estatales, Nacionales e \
+var serviceSevenEs = new Service("Money Order", "", "fa-money-check");
+var serviceEightEs = new Service("Envíos de dinero", "", "fa-envelope-open-dollar");
+var serviceNineEs = new Service("Pagos de Biles", "Estatales, Nacionales e \
 Internacionales", "fa-file-invoice-dollar");
-var serviceNineEs = new Service("Cheques en Efectivo", "", "fa-money-check-edit-alt");
-var serviceTenEs = new Service("Paqueteria, Sobres a Centro y Sur America", "",
+var serviceTenEs = new Service("Cambio de Cheques", "", "fa-money-check-edit-alt");
+var serviceElevenEs = new Service("Paqueteria, Sobres a Centro y Sur America", "",
 "fa-box-open");
-var serviceElevenEs = new Service("Venta, Activación y Recarga de Celulares", "",
+var serviceTwelveEs = new Service("Venta, Activación y Recarga de Celulares", "",
 "fa-mobile");
 
 var allServicesEn = [serviceOneEn, serviceTwoEn, serviceThreeEn, serviceFourEn,
   serviceFiveEn, serviceSixEn, serviceEightEn, serviceNineEn, serviceTenEn,
-  serviceElevenEn];
+  serviceElevenEn, serviceTwelveEn];
 var allServicesEs = [serviceOneEs, serviceTwoEs, serviceThreeEs, serviceFourEs,
   serviceFiveEs, serviceSixEs, serviceEightEs, serviceNineEs, serviceTenEs,
-  serviceElevenEs];
+  serviceElevenEs, serviceTwelveEs];
 var allServices;
 
 // FOOTER

@@ -11,9 +11,9 @@ $(document).ready(function() {
 });
 
 setTimeout(function() {
-  $('.welcome-banner').animate({opacity: 1, top: '0'}, 700);
-  $('.scroll-down-div').animate({opacity: 1, top: '0'}, 700)
-}, 900);
+  $('.welcome-banner').animate({opacity: 1, top: '0'}, 1100);
+  $('.scroll-down-div').animate({opacity: 1, top: '0'}, 1100)
+}, 1000);
 
 setTimeout(function() {
   anime.timeline({loop: false})
