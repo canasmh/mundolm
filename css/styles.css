@@ -188,7 +188,7 @@ Welcome Section
   opacity: 0;
   margin: auto 10vw;
   width: 80vw;
-  background-color: rgba(0, 190, 244, 0.8);
+  background-color: rgba(0, 190, 244, 0.7);
   border: 1px solid #3A429A;
   border-radius: 15%;
   text-align: center;
@@ -684,9 +684,9 @@ FOOTER
 
 footer {
   text-align: center;
-  margin: 1.2rem 0;
+  margin: 1rem 0;
 }
 
 footer p {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
