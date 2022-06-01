@@ -13,7 +13,7 @@ $(document).ready(function() {
 setTimeout(function() {
   $('.welcome-banner').animate({opacity: 1, top: '0'}, 1100);
   $('.scroll-down-div').animate({opacity: 1, top: '0'}, 1100)
-}, 900);
+}, 1000);
 
 setTimeout(function() {
   anime.timeline({loop: false})
