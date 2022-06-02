@@ -50,7 +50,11 @@ var teamMemberFourEn = new TeamMember("Norma Cinto", "A tender and simple \
 Guatemalan woman with more than three years she has delivered an excellent \
 service, of providing ours in a simple, honest and loving way.",
 "images/norma.png");
-var teamMemberFiveEn = new TeamMember("Yuridia Hernandez", "Yuri as affectionate \
+var teamMemberFiveEn = new TeamMember("Efren Lozano", "Efren is perhaps the youngest, \
+in time of service in the MLM family; but has a great desire to learn and serve. \
+He has given us a lot of satisfaction and gives us hope that we continue to get \
+better.", "images/efren.jpeg");
+var teamMemberSixEn = new TeamMember("Yuridia Hernandez", "Yuri as affectionate \
 as can be, offers us her excellent service from Mexico. She accompanied us in \
 person for more than four years and now offers us her great service virtually. \
 Yuri is agile, attentive and with a great commitment not only to our clients, \
@@ -75,16 +79,20 @@ excelentes productos.", "images/andres.png");
 var teamMemberFourEs = new TeamMember("Norma Cinto", "Una tierna y sencilla mujer \
 Guatemalteca con mas de tres años acompañados a entregar su excelente servicio, \
 a nuestros clientes de una manera simple, honesta y amorosa.", "images/norma.png");
-var teamMemberFiveEs = new TeamMember("Yuridia Hernandez", "Yuri como \
+var teamMemberFiveEs = new TeamMember("Efren Lozano", "Efren es quizás el más joven, \
+en tiempo de servicio en la familia MLM; pero tiene un gran deseo de aprender y servir.\
+ Nos ha dado muchas satisfacciones y nos da esperanza de que seguimos mejorando.",
+"images/efren.jpg");
+var teamMemberSixEs = new TeamMember("Yuridia Hernandez", "Yuri como \
 cariñosamente, le decimos nosotros y nuestros clientes, nos ofrece su excelente \
 servicio desde nuestro Call Center en México. Nos acompaño presencialmente por mas de cuatro años y \
 ahora nos ofrece su gran servicio de manera virtual. Yuri es ágil atenta y con \
 un gran compromiso no solo con nuestros clientes , sino con Mundo Latino \
 Multiservicios.", "images/team-img-test.png");
 var teamMembersEn = [teamMemberOneEn, teamMemberTwoEn, teamMemberThreeEn,
-  teamMemberFourEn, teamMemberFiveEn];
+  teamMemberFourEn, teamMemberFiveEn, teamMemberSixEn];
 var teamMembersEs = [teamMemberOneEs, teamMemberTwoEs, teamMemberThreeEs,
-  teamMemberFourEs, teamMemberFiveEs];
+  teamMemberFourEs, teamMemberFiveEs, teamMemberSixEs];
 var teamMembers;
 
 var footerEn = ["Contact Us", "Mon-Sat", "Sun"];
