@@ -6,6 +6,8 @@ catch (TypeError) {
   onHomePage = false;
 }
 
+
+
 $(document).ready(function() {
   $('div.welcome-section').animate({left: '0', opacity: 1}, 800)
 });
@@ -37,6 +39,20 @@ $('.scroll-down-arrow').click(function() {
   let aboutUs = document.getElementsByClassName("about-section")[0];
   aboutUs.scrollIntoView({behavior: "smooth"});
 });
+
+function showModal() {
+
+  const myModal = new bootstrap.Modal('#myModal', {
+    keyboard: false,
+    show: true
+  })
+
+  modalToggle = document.getElementById('toggleMyModal'); 
+  myModal.show(modalToggle)
+}
+
+setTimeout(showModal, 3500);
+
 
 $('.insurance-logo').hover(function () {
   $( this ).animate({height: '13.5rem', width: '13.5rem', margin: '4.5rem 2.5rem'}, 300);

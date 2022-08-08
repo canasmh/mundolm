@@ -27,6 +27,33 @@
     <script src="https://kit.fontawesome.com/f6264fea48.js" crossorigin="anonymous"></script>
   </head>
   <body>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary remove" data-bs-toggle="modal" data-bs-target="#myModal" >
+      Launch static backdrop modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">We're hiring!</h5>
+          </div>
+          <div class="modal-body">
+            <p>We're currently looking for bilingual (Spanish and English) personnal  interested in getting their career started in insurance sales. </p>
+            
+            <p>Submit your application today!</p>
+          </div>
+          <div class="modal-footer">
+            
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Not interested</button>
+            <a href="https://mundolm.herokuapp.com/apply"><button type="button" class="btn btn-primary">Apply</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <nav class="navbar sticky-top navbar-expand-lg bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
