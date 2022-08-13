@@ -30,6 +30,10 @@ var hiringAnnouncementEn = ["We're Hiring", "We're currently looking for bilingu
 var hiringAnnouncementEs = ["¡Trabaja con nosotros!", "Actualmente estamos buscando personas bilingües (español e inglés) interesadas en iniciar sus carreras en la venta de seguros.", "¡Envíe su solicitud hoy!", "No, gracias", "Aplicar"]
 var hiringAnnouncement;
 
+var langButtonEn = "En español";
+var langButtonEs = "In English";
+var langButton;
+
 var welcomeEn = ["Welcome", "...We serve with joy! 😊", "En español", "Get Quote"];
 var welcomeEs = ["Bienvenidos", "...Servimos con alegría 😊", "In English", "Conseguir Cotización"];
 var welcome;
@@ -118,6 +122,7 @@ function changeLanguage() {
 
 $('.lang-link').click(changeLanguage);
 $('.es-btn').click(changeLanguage);
+$('.lang-btn-outline').click(changeLanguage);
 
 
 
@@ -127,6 +132,7 @@ if (localStorage.getItem("lang") == "en") {
   nav = navEn;
   dropDown = dropDownEn;
   hiringAnnouncement = hiringAnnouncementEn;
+  langButton = langButtonEn;
   welcome = welcomeEn;
   about = aboutEn;
   services = servicesEn;
@@ -138,6 +144,7 @@ if (localStorage.getItem("lang") == "en") {
   nav = navEs;
   dropDown = dropDownEs;
   hiringAnnouncement = hiringAnnouncementEs;
+  langButton = langButtonEs;
   welcome = welcomeEs;
   about = aboutEs;
   services = servicesEs;
@@ -151,6 +158,8 @@ document.title = title;
 $('title').textContent = title
 var navLinks = $('a.nav-link')
 var dropDownItems = $('a.dropdown-item')
+
+$('button.lang-btn-outline')[0].textContent = langButton;
 
 for (let i=0; i < navLinks.length; i++) {
   navLinks[i].textContent = nav[i]
@@ -167,8 +176,8 @@ modalHeader[0].textContent = hiringAnnouncement[0];
 modalBody[0].textContent = hiringAnnouncement[1];
 modalBody[1].textContent = hiringAnnouncement[2];
 
-modalFooter[0].textContent = hiringAnnouncement[3];
-modalFooter[1].textContent = hiringAnnouncement[4];
+modalFooter[1].textContent = hiringAnnouncement[3];
+modalFooter[2].textContent = hiringAnnouncement[4];
 
 $('h2.welcome')[0].textContent = welcome[0];
 $('p.motto')[0].textContent = welcome[1];
