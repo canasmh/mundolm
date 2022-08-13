@@ -682,11 +682,26 @@ CONTACT page
   background: rgba(58, 66, 154, 1);
 }
 
+.lang-btn-outline {
+  text-align: center;
+  font-size: 1rem;
+  margin: 0.4rem auto;
+  color: #3A429A;
+  border-radius: 5px;
+  border: 1px solid #3A429A;
+  background-color: inherit;
+}
+
 .submit-btn:hover {
   color: #FFF;
   border: 1px solid #3A429A;
   background-color: rgba(58, 66, 154, 0.8);
+}
 
+.lang-btn-outline:hover {
+  color: #FFF;
+  border: 1px solid #3A429A;
+  background-color: #3A429A;
 }
 
 /*

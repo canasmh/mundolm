@@ -26,6 +26,14 @@ var dropDownEn = ["Get a Quote", "Make a Payment"];
 var dropDownEs =  ["Conseguir Cotización", "Realizar un pago"];
 var dropDown;
 
+var hiringAnnouncementEn = ["We're Hiring", "We're currently looking for bilingual (Spanish and English) personnal  interested in getting their career started in insurance sales.", "Submit your application today", "Not interested", "Apply"]
+var hiringAnnouncementEs = ["¡Trabaja con nosotros!", "Actualmente estamos buscando personas bilingües (español e inglés) interesadas en iniciar sus carreras en la venta de seguros.", "¡Envíe su solicitud hoy!", "No, gracias", "Aplicar"]
+var hiringAnnouncement;
+
+var langButtonEn = "En español";
+var langButtonEs = "In English";
+var langButton;
+
 var welcomeEn = ["Welcome", "...We serve with joy! 😊", "En español", "Get Quote"];
 var welcomeEs = ["Bienvenidos", "...Servimos con alegría 😊", "In English", "Conseguir Cotización"];
 var welcome;
@@ -114,6 +122,7 @@ function changeLanguage() {
 
 $('.lang-link').click(changeLanguage);
 $('.es-btn').click(changeLanguage);
+$('.lang-btn-outline').click(changeLanguage);
 
 
 
@@ -122,6 +131,8 @@ if (localStorage.getItem("lang") == "en") {
   title = titleEn;
   nav = navEn;
   dropDown = dropDownEn;
+  hiringAnnouncement = hiringAnnouncementEn;
+  langButton = langButtonEn;
   welcome = welcomeEn;
   about = aboutEn;
   services = servicesEn;
@@ -132,6 +143,8 @@ if (localStorage.getItem("lang") == "en") {
   title = titleEs;
   nav = navEs;
   dropDown = dropDownEs;
+  hiringAnnouncement = hiringAnnouncementEs;
+  langButton = langButtonEs;
   welcome = welcomeEs;
   about = aboutEs;
   services = servicesEs;
@@ -146,6 +159,8 @@ $('title').textContent = title
 var navLinks = $('a.nav-link')
 var dropDownItems = $('a.dropdown-item')
 
+$('button.lang-btn-outline')[0].textContent = langButton;
+
 for (let i=0; i < navLinks.length; i++) {
   navLinks[i].textContent = nav[i]
 }
@@ -153,6 +168,16 @@ for (let i=0; i < navLinks.length; i++) {
 for (let i=0; i < dropDownItems.length; i++) {
   dropDownItems[i].textContent = dropDown[i]
 }
+
+var modalHeader = $('h5.modal-title');
+var modalBody = $('div.modal-body p')
+var modalFooter = $('div.modal-footer button')
+modalHeader[0].textContent = hiringAnnouncement[0];
+modalBody[0].textContent = hiringAnnouncement[1];
+modalBody[1].textContent = hiringAnnouncement[2];
+
+modalFooter[1].textContent = hiringAnnouncement[3];
+modalFooter[2].textContent = hiringAnnouncement[4];
 
 $('h2.welcome')[0].textContent = welcome[0];
 $('p.motto')[0].textContent = welcome[1];
