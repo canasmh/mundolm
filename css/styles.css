@@ -174,21 +174,6 @@ NAVBAR
 
 }
 
-.logo-bg {
-  width: 20rem;
-  margin: 0 auto;
-}
-
-.primary-logo {
-  width: 100%;
-}
-
-@media only screen and (min-width: 600px) {
-  .logo-bg {
-    width: 25rem;
-  }
-}
-
 /*
 
 
@@ -231,6 +216,21 @@ Welcome Section
   font-weight: 300;
   letter-spacing: 7px;
   color: #3A429A;
+}
+
+.primary-logo-container {
+  width: 20rem;
+  margin: 0 auto;
+}
+
+.primary-logo {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .logo-bg {
+    width: 25rem;
+  }
 }
 
 .motto {
