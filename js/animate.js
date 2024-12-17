@@ -7,7 +7,6 @@ catch (TypeError) {
 }
 
 setTimeout(function() {
-  $('.welcome-banner').animate({opacity: 1, top: '0'}, 1100);
   $('.scroll-down-div').animate({opacity: 1, top: '0'}, 1100)
 }, 1000);
 
