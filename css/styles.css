@@ -174,6 +174,21 @@ NAVBAR
 
 }
 
+.logo-bg {
+  width: 20rem;
+  margin: 0 auto;
+}
+
+.primary-logo {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .logo-bg {
+    width: 25rem;
+  }
+}
+
 /*
 
 
@@ -196,34 +211,18 @@ Welcome Section
 .welcome-section {
   min-height: 80vh;
   display: flex;
-  background-image: url("../images/phone-call.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right;
+  justify-content: center;
   color: white;
   margin-bottom: 2vh;
   position: relative;
-  right: 100vw;
-  opacity: 0;
 }
 
-.welcome-banner {
-  opacity: 0;
-  margin: auto 10vw;
-  width: 80vw;
-  background-color: rgba(0, 190, 244, 0.7);
-  border: 1px solid #3A429A;
-  border-radius: 15%;
-  text-align: center;
-  min-height: 40vh;
-  padding-top: 3rem;
-  padding-bottom: 2.5rem;
+.welcome-container {
   display: flex;
-  justify-content: center;
-  align-content: center;
   flex-direction: column;
-  position: relative;
-  top: 100vh;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .welcome {
@@ -231,17 +230,15 @@ Welcome Section
   font-size: 4rem;
   font-weight: 300;
   letter-spacing: 7px;
-  color: #FFFFFF;
+  color: #3A429A;
 }
 
 .motto {
-  opacity: 0;
   font-family: 'Caveat', cursive;
   font-weight: 300;
   font-size: 2rem;
-  color: #FFF;;
+  color: #3A429A;
   letter-spacing: 7px;
-  display: none;
 }
 
 .ellipses {
@@ -272,7 +269,7 @@ div.welcome-banner h2, hr.welcome-hr {
 }
 
 .welcome-buttons {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   display: inline;
 }
@@ -280,27 +277,35 @@ div.welcome-banner h2, hr.welcome-hr {
 .es-btn {
   border-radius: 10px;
   background-color: inherit;
-  border: 1px solid #FFF;
-  color: #FFF;
+  border: 1px solid #3A429A;
+  color: #3A429A;
+  transition: all 0.1s ease-in;
   margin: 0.5rem 0.3rem;
-  width: 60%;
+  width: 100%;
   padding: 0.5rem;
+}
+
+.es-btn:hover {
+  border: 1px solid #898ec2;
+  color: #898ec2;
+
 }
 
 .quote-btn {
   border-radius: 10px;
   background-color: #3A429A;
   border: 1px solid #3A429A;
+  transition: all 0.1s ease-in;
   color: #FFF;
   margin: 0.5rem 0.3rem;
-  width: 60%;
+  width: 100%;
   padding: 0.5rem;
 }
 
-.es-btn:hover, .quote-btn:hover  {
-  border: 1px solid #3A429A;
-  background-color: #FFF;
-  color: #3A429A;
+.quote-btn:hover  {
+  background-color: #898ec2;
+  border-color: #898ec2;
+  color: #FFF;
 }
 
 .scroll-down-div {
@@ -586,7 +591,7 @@ ABOUT page
 */
 
 .about-page {
-  background-image: url("../images/group-pic2.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("../images/our-team-ai.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
